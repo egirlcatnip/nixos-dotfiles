@@ -1,0 +1,63 @@
+{
+  "control": [
+    {
+      "VTOY_TREE_VIEW_MENU_STYLE": "0"
+    },
+    {
+      "VTOY_LINUX_REMOUNT": "1"
+    },
+    {
+      "VTOY_SECONDARY_BOOT_MENU": "0"
+    },
+    {
+      "VTOY_DEFAULT_KBD_LAYOUT": "QWERTZ"
+    },
+    {
+      "VTOY_DEFAULT_SEARCH_ROOT": "/ISOs"
+    }
+  ],
+  "theme": {
+    "gfxmode": "1920x1200",
+    "file": "/ventoy/theme/catppuccin-mocha/theme.txt",
+    "ventoy_color": "#89b4fa",
+    "fonts": [
+      "/ventoy/catppuccin-latte/terminus-14.pf2"
+    ]
+  },
+  "menu_class": [
+    {
+      "parent": "/ISOs/Fedora",
+      "class": "fedora"
+    },
+    {
+      "parent": "/ISOs/Windows",
+      "class": "windows11"
+    }
+  ],
+  "persistence": [
+    {
+      "image": "/ISOs/Fedora/F39-WORK-20240215.iso",
+      "autosel": "1",
+      "timeout": "0",
+      "backend": [
+        "/ISOs/Fedora/persistence/fedora.dat"
+      ]
+    },
+    {
+      "image": "/ISOs/Fedora/F39-KDE-20240215.iso",
+      "autosel": "1",
+      "timeout": "0",
+      "backend": [
+        "/ISOs/Fedora/persistence/fedora.dat"
+      ]
+    }
+  ],
+
+  "conf_replace": [
+    {
+      "iso": "/ISOs/Fedora/F39-KDE-20240215.iso",
+      "org": "/EFI/BOOT/grub.cfg",
+      "new": "/ISOs/Fedora/persistence/fedora-persistent-kde.cfg"
+    }
+  ]
+}

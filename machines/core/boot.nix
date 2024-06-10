@@ -9,7 +9,12 @@
   config = lib.mkMerge [
     
     (lib.mkIf config.grub.enable {
-      config.systemdboot.enable = false;
+      assertions =
+      [ { 
+          assertion = !config.systemdboot.enable;
+          message = "grub conflicts with systemdboot";
+        }
+      ];
 
       boot.loader.grub = {
         enable = true;
@@ -24,7 +29,12 @@
     })
 
     (lib.mkIf config.systemdboot.enable {
-      config.grub.enable = false;
+      assertions =
+      [ { 
+          assertion = !config.grub.enable;
+          message = "systemdboot conflicts with grub";
+        }
+      ];
 
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;

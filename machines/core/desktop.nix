@@ -9,17 +9,31 @@
   config = lib.mkMerge [
     
     (lib.mkIf config.gnome.enable {
-      config.kde.enable = false;
+      assertions =
+      [ { 
+          assertion = !config.kde.enable;
+          message = "gnome conflicts with kde";
+        }
+      ];
+
 
       services.xserver.displayManager.gdm.enable = true;
       services.xserver.desktopManager.gnome.enable = true;
     })
 
     (lib.mkIf config.kde.enable {
-      config.gnome.enable = false;
+      assertions =
+      [ { 
+          assertion = !config.gnome.enable;
+          message = "kde conflicts with gnome";
+        }
+      ];
+
+
+
     
-      services.displayManager.sddm.enable = false;
-      services.desktopManager.plasma6.enable = false;
+      services.displayManager.sddm.enable = true;
+      services.desktopManager.plasma6.enable = true;
 
     })
   ];

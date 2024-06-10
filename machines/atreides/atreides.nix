@@ -36,15 +36,16 @@
 
   services.xserver.excludePackages = [pkgs.xterm];
   environment.gnome.excludePackages = with pkgs; [
+    gnome-connections # remote desktop
     gnome-tour
+    gnome.geary # mail
+    gnome.gnome-contacts
+    gnome.gnome-contacts
     gnome.gnome-maps
     gnome.gnome-music
+    gnome.seahorse # passwords
+    gnome.simple-scan # doc scan
     gnome.totem # gnome video player
     gnome.yelp # gnome help
-    gnome.gnome-contacts
-    gnome-connections
-    gnome.gnome-contacts
-    gnome.simple-scan
-    gnome.seahorse
   ];
 }

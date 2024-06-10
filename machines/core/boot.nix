@@ -51,7 +51,7 @@
     })
 
     (lib.mkIf config.silent_boot.enable {
-      consoleLogLevel = 0;
+      boot.consoleLogLevel = 0;
       initrd.verbose = false;
       kernelParams = [
         "quiet"

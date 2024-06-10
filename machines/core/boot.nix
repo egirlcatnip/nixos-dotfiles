@@ -52,8 +52,8 @@
 
     (lib.mkIf config.silent_boot.enable {
       boot.consoleLogLevel = 0;
-      initrd.verbose = false;
-      kernelParams = [
+      boot.initrd.verbose = false;
+      boot.kernelParams = [
         "quiet"
         "splash"
        "boot.shell_on_fail"

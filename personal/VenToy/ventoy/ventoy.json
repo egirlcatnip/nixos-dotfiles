@@ -52,7 +52,6 @@
       ]
     }
   ],
-
   "conf_replace": [
     {
       "iso": "/ISOs/Fedora/F39-KDE-20240215.iso",

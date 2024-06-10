@@ -6,6 +6,7 @@
     ./boot.nix
     ./cleanup.nix
     ./desktop.nix
+    ./flatpak.nix
     ./layout.nix
     ./locale.nix
     ./networking.nix

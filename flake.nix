@@ -6,6 +6,8 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
+    flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,6 +19,7 @@
     nixpkgs,
     nixpkgs-unstable,
     nixos-hardware,
+    flatpaks,
     home-manager,
     ...
   }: {
@@ -27,6 +30,7 @@
 
         modules = [
           ./machines/atreides/atreides.nix
+          flatpaks.nixosModules.default
 
           # ./home.nix # todo!
         ];

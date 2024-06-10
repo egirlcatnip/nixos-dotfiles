@@ -1,13 +1,12 @@
-{ username, config, lib, ... }:
+{ ... }:
 
 {
   imports = [
     ./../core        # Global configs for all systems
-    ./hardware.nix   # Disk layout only for "atreides"
+    ./hardware.nix   # Disk layout *only* for "atreides"
   ];
 
   networking.hostName = "atreides";
-
 
   ## Enable specific modules of global configuration
 
@@ -19,16 +18,8 @@
   gnome.enable = true;
   kde.enable = false;
 
-
-
   # Enable my personal keyboard layout
   layout.enable = true;
-
-  
-
-
-
-
 
 
   # System specific options:
@@ -37,5 +28,5 @@
 
 
 
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "23.11"; # Do not edit
 }

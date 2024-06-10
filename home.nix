@@ -1,11 +1,12 @@
+# This needs to be redone!
+
+
 { inputs, lib, pkgs, osConfig, ... }:
 let
   hostName = osConfig.networking.hostName;
 
   imports = [
-    ./home/starship.nix
-
-
+    # ./home/starship.nix
   ];
 
 in {

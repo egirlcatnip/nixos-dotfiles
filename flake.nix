@@ -2,9 +2,6 @@
   description = "egirlcatnip's configuration";
 
   inputs = {
-
-    username = "egirlcatnip";
-
     nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
@@ -18,8 +15,13 @@
 
   };
 
-  outputs = { self, username, nixpkgs, nixpkgs-unstable, nixos-hardware, nil, home-manager, ...  }@inputs:
-  {
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, nil, home-manager, ...  }@inputs:
+  
+  let
+  username = "egirlcatnip";
+  
+  in {
+    #atreides is the machine/its' hostname (see /machines)
     nixosConfigurations.atreides = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {
@@ -28,11 +30,10 @@
 
       modules = [
         ./machines/atreides/atreides.nix 
-        ./packages
-
+        # ./packages    # Here, packages will live
         
 
-
+        # Not sure about home manager yet, this is stolen from elsewhere:
         home-manager.nixosModules.home-manager {
           home-manager = {
             useGlobalPkgs = true;

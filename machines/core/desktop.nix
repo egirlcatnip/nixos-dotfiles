@@ -4,7 +4,6 @@
   options = {
     gnome.enable = lib.mkEnableOption "enable Gnome desktop enviroment";
     kde.enable = lib.mkEnableOption "enable KDE desktop enviroment";
-
   };
 
   config = lib.mkMerge [
@@ -15,7 +14,6 @@
       services.xserver.displayManager.gdm.enable = true;
       services.xserver.desktopManager.gnome.enable = true;
     })
-
 
     (lib.mkIf config.kde.enable {
       config.gnome.enable = false;

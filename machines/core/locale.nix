@@ -1,7 +1,6 @@
 { ... }:
 
 { 
-  
   # Locale, system language, time format language
   i18n = {
      defaultLocale = "en_US.UTF-8";

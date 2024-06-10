@@ -10,8 +10,7 @@ in {
 
 
   config = lib.mkIf config.layout.enable {
-    
-    # Create layout
+    # Create layout from symbols file
     services.xserver.xkb.extraLayouts = {
       egirlcattype = {
         description = "Slovak (egirlcattype)";
@@ -23,7 +22,7 @@ in {
     # Apply layout
     services.xserver.xkb.layout = "egirlcattype"; 
 
-    # Share layout
+    # Share the used layout in tty
     console.useXkbConfig = true;
 
   };

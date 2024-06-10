@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 # Import global configuration
 {
@@ -11,5 +11,30 @@
     ./networking.nix
     ./layout.nix
   ];
+
+
+
+  
+# CORE PACKAGES
+environment.systemPackages = 
+
+#STABLE
+(with pkgs; 
+[
+git
+gh
+vscode
+google-chrome
+firefox
+ptyxis
+
+])
+++
+(with pkgs-unstable; 
+[
+blackbox
+
+]);
+
   
 }

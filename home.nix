@@ -1,34 +1,11 @@
-# This needs to be redone!
+{ home-manager, ... }:
+
+{
 
 
-{ inputs, lib, pkgs, osConfig, ... }:
-let
-  hostName = osConfig.networking.hostName;
-
-  imports = [
-    # ./home/starship.nix
-  ];
-
-in {
-  home = {
-    stateVersion = "23.11";
-
-    packages = with pkgs; [
-      galaxy-buds-client
-    ];  
-   
+  home-manager.users.my_username = {
+    /* The home.stateVersion option does not have a default and must be set */
+    home.stateVersion = "24.05";
+    /* Here goes the rest of your home-manager config, e.g. home.packages = [ pkgs.foo ]; */
   };
-  inherit imports;
-
-  programs = {
-    vscode = {
-      enable = true;
-    };
-    zoxide = {
-      enable = true;
-    };
-
-  };
-   
-
 }

@@ -12,30 +12,51 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-
-    
-
   };
 
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, nil, home-manager, ...  }@inputs:
-  
-  {
 
+
+
+  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, nil, home-manager, ...  }:
+  
+  let
+  username = "egirlcatnip";
+
+  system = "x86_64-linux";
+  lib = nixpkgs.lib;
+  
+  pkgs = nixpkgs.legacyPackages.${system};
+  pkgs-unstable = nixpkgs-unstable.legacyPackages .${system};
+  
+  in
+  {
     
 
     #atreides is the machine/its' hostname (see /machines)
-    nixosConfigurations.atreides = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+    nixosConfigurations = {
+      atreides = lib.nixosSystem {
+        
+
+        nixpkgs.config.allowUnfree = true;
+
+
+        system = "${system}";
       
-       
-      modules = [
-        ./machines/atreides/atreides.nix 
-        # ./packages    # Here, packages will live
-      ];
+        modules = [
+         ./machines/atreides/atreides.nix
+        	
+          
+          # ./home.nix # todo!
+        ];
+        specialArgs = {
+          inherit username;
+          inherit pkgs;
+          inherit pkgs-unstable;
+        };
+      };   
     };
-
   };
+  
+  
 }
-

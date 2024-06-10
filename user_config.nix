@@ -1,4 +1,4 @@
-{lib, types}: 
+{ lib, types, ...}: 
 
 {
   options = {
@@ -11,8 +11,7 @@
     };
 
   };
+  
 
-
-
-  config.username = "egirlcatnip";
-} 
+  
+}

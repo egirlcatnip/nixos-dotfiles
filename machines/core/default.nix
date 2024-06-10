@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 # Import global configuration
 {
@@ -10,31 +10,19 @@
     ./audio.nix
     ./networking.nix
     ./layout.nix
+    #./packages.nix
   ];
 
 
+  nixpkgs.config.allowUnfree = true;
 
+  environment.systemPackages = with pkgs; [
+  git
+  google-chrome
+  firefox
+  vscode
+  alejandra
   
-# CORE PACKAGES
-environment.systemPackages = 
+];  
 
-#STABLE
-(with pkgs; 
-[
-git
-gh
-vscode
-google-chrome
-firefox
-ptyxis
-
-])
-++
-(with pkgs-unstable; 
-[
-blackbox
-
-]);
-
-  
 }

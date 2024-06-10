@@ -13,5 +13,8 @@
 
   # Enable zsh shell
   programs.zsh.enable = true;
+  # Enable git
+  programs.git.enable = true;
+  
 
 }

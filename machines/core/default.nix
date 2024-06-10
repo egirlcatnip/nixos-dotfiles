@@ -3,7 +3,6 @@
 {
   imports = [
     ./audio.nix
-    ./autoupdate.nix
     ./boot.nix
     ./cleanup.nix
     ./desktop.nix

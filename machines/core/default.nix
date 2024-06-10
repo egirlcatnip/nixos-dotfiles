@@ -10,19 +10,10 @@
     ./audio.nix
     ./networking.nix
     ./layout.nix
-    #./packages.nix
+    ./packages.nix 
   ];
 
 
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-  git
-  google-chrome
-  firefox
-  vscode
-  alejandra
-  
-];  
 
 }

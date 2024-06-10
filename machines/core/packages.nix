@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 
-# this doesn't work
+# Packages for all systems to share
 {
   environment.systemPackages = with pkgs; [
   git

@@ -4,7 +4,7 @@
   imports = [
     ./../core        # Global configs for all systems
     ./hardware.nix   # Disk layout *only* for "atreides"
-    #./packages.nix   # Packages *only* for "atreides"
+    ./packages.nix   # Packages *only* for "atreides"
   ];
  
   networking.hostName = "atreides";

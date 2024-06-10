@@ -4,7 +4,7 @@
 
   # Add flathub as a remote
   services.flatpak.remotes = {
-    "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+    "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepoa";
     "flathub-beta" = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
   };
 }

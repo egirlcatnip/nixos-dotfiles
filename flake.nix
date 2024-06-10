@@ -6,8 +6,6 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
-    nil.url = "github:oxalica/nil";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,8 +23,8 @@
   }: let
     system = "x86_64-linux";
   in {
-    #atreides is the machine/its' hostname (see /machines)
     nixosConfigurations = {
+      #atreides is the name of one configuration
       atreides = nixpkgs.lib.nixosSystem {
         system = "${system}";
 

@@ -7,6 +7,7 @@
     firefox
     vscode
     alejandra
+    nixd
   ];
 
   # Enable flatpak support

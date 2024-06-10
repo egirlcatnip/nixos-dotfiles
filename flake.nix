@@ -17,7 +17,6 @@
     nixpkgs,
     nixpkgs-unstable,
     nixos-hardware,
-    nil,
     home-manager,
     ...
   }: let

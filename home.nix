@@ -11,7 +11,7 @@ let
 
 in {
   home = {
-    stateVersion = "23.05";
+    stateVersion = "23.11";
 
     packages = with pkgs; [
       galaxy-buds-client
@@ -19,11 +19,6 @@ in {
    
   };
   inherit imports;
-    
-  nixpkgs.config = {
-    allowUnfree = true;
-  };
-
 
   programs = {
     vscode = {

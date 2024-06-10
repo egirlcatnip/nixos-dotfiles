@@ -1,6 +1,6 @@
 { lib, config, ... }:
 
-let  symbols = ./../dotfiles/.config/xkb/symbols/egirlcattype;
+let  symbols = ./../../dotfiles/.config/xkb/symbols/egirlcattype;
 
 in { 
 

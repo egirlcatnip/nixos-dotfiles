@@ -1,9 +1,9 @@
-{ username, pkgs, ... }:
+{ pkgs, ... }:
 
 { 
   users = {
-    users.${username} = {
-      description = "${username}";
+    users.egirlcatnip = {
+      description = "egirlcatnip";
       extraGroups = [ "wheel" ];
       isNormalUser = true;
       shell = pkgs.zsh;

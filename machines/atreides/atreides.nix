@@ -5,7 +5,7 @@
     ./../core        # Global configs for all systems
     ./hardware.nix   # Disk layout *only* for "atreides"
   ];
-
+ 
   networking.hostName = "atreides";
 
   ## Enable specific modules of global configuration

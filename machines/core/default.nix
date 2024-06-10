@@ -11,6 +11,7 @@
     ./networking.nix
     ./layout.nix
     ./packages.nix 
+    ./cleanup.nix
   ];
 
 

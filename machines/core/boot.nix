@@ -4,6 +4,10 @@
   options = {
     grub.enable = lib.mkEnableOption "enable the grub bootloader";
     systemdboot.enable = lib.mkEnableOption "enable the systemdboot bootloader";
+    plymouth.enable = lib.mkEnableOption "enable plymouth boot animation";
+    silent_boot.enable = lib.mkEnableOption "enable plymouth boot animation";
+
+
   };
 
   config = lib.mkMerge [
@@ -39,5 +43,27 @@
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
     })
+
+    (lib.mkIf config.plymouth.enable {
+      boot.plymouth = {
+        enable = true; 
+      };
+    })
+
+    (lib.mkIf config.silent_boot.enable {
+      consoleLogLevel = 0;
+      initrd.verbose = false;
+      kernelParams = [
+        "quiet"
+        "splash"
+       "boot.shell_on_fail"
+       "loglevel=3"
+       "rd.systemd.show_status=false"
+       "rd.udev.log_level=3"
+       "udev.log_priority=3"
+    ];
+
+    })
+
   ];
 }

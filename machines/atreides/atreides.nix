@@ -15,6 +15,13 @@
   grub.enable = false;
   systemdboot.enable = true;
 
+  # Plymouth
+  plymouth.enable = true;
+
+  #Silent Boot
+  silent_boot.enable = true;
+  
+
   # Choose only one Desktop Enviroment
   gnome.enable = true;
   kde.enable = false;
@@ -26,7 +33,7 @@
   # System specific options:
 
   services.thermald.enable = true;
-
+  zramSwap.enable = true;
 
   system.stateVersion = "23.11"; # Do not edit
 }

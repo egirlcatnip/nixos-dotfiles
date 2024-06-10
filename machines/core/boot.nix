@@ -1,20 +1,19 @@
-{ lib, config, ... }:
-
-{ 
+{
+  lib,
+  config,
+  ...
+}: {
   options = {
     grub.enable = lib.mkEnableOption "enable the grub bootloader";
     systemdboot.enable = lib.mkEnableOption "enable the systemdboot bootloader";
     plymouth.enable = lib.mkEnableOption "enable plymouth boot animation";
     silent_boot.enable = lib.mkEnableOption "enable plymouth boot animation";
-
-
   };
 
   config = lib.mkMerge [
-    
     (lib.mkIf config.grub.enable {
-      assertions =
-      [ { 
+      assertions = [
+        {
           assertion = !config.systemdboot.enable;
           message = "grub conflicts with systemdboot";
         }
@@ -33,8 +32,8 @@
     })
 
     (lib.mkIf config.systemdboot.enable {
-      assertions =
-      [ { 
+      assertions = [
+        {
           assertion = !config.grub.enable;
           message = "systemdboot conflicts with grub";
         }
@@ -46,7 +45,7 @@
 
     (lib.mkIf config.plymouth.enable {
       boot.plymouth = {
-        enable = true; 
+        enable = true;
       };
     })
 
@@ -56,14 +55,12 @@
       boot.kernelParams = [
         "quiet"
         "splash"
-       "boot.shell_on_fail"
-       "loglevel=3"
-       "rd.systemd.show_status=false"
-       "rd.udev.log_level=3"
-       "udev.log_priority=3"
-    ];
-
+        "boot.shell_on_fail"
+        "loglevel=3"
+        "rd.systemd.show_status=false"
+        "rd.udev.log_level=3"
+        "udev.log_priority=3"
+      ];
     })
-
   ];
 }

@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-
+{pkgs, ...}:
 # Import global configuration
 {
   imports = [
@@ -10,11 +9,9 @@
     ./audio.nix
     ./networking.nix
     ./layout.nix
-    ./packages.nix 
+    ./packages.nix
     ./cleanup.nix
   ];
 
-
   nixpkgs.config.allowUnfree = true;
-
 }

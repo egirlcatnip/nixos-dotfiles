@@ -14,27 +14,28 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nixos-hardware, nil, home-manager, ...  }:
-  
-  let
-  system = "x86_64-linux";
-  
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    nixos-hardware,
+    nil,
+    home-manager,
+    ...
+  }: let
+    system = "x86_64-linux";
   in {
-    
     #atreides is the machine/its' hostname (see /machines)
     nixosConfigurations = {
       atreides = nixpkgs.lib.nixosSystem {
-        
         system = "${system}";
-      
-        modules = [
-         ./machines/atreides/atreides.nix
 
-         # ./home.nix # todo!
+        modules = [
+          ./machines/atreides/atreides.nix
+
+          # ./home.nix # todo!
         ];
-      };   
+      };
     };
   };
-  
-  
 }

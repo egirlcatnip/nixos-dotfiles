@@ -33,17 +33,18 @@
   layout.enable = true;
 
   # Personal Gnome configuration:
-  environment.gnome.excludePackages = with pkgs; [
-    xterm
 
+  services.xserver.excludePackages = [pkgs.xterm];
+  environment.gnome.excludePackages = with pkgs; [
     gnome-tour
-    gnome-maps
-    gnome-music
-    gnome-videos
-    gnome-help
-    gnome-extensions-app
-    gnome-contacts
+    gnome.gnome-maps
+    gnome.gnome-music
+    gnome.totem # gnome video player
+    gnome.yelp # gnome help
+    gnome.gnome-contacts
     gnome-connections
-    gnome-contacts
+    gnome.gnome-contacts
+    gnome.simple-scan
+    gnome.seahorse
   ];
 }

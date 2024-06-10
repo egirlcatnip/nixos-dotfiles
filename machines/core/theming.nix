@@ -8,6 +8,8 @@
   };
 
   config = lib.mkIf config.theming.enable {
-    #todo
+    catppuccin.enable = true;
+    catppuccin.accent = "lavender";
+    catppuccin.flavor = "mocha";
   };
 }

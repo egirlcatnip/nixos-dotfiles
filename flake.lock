@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1718053251,
+        "narHash": "sha256-qva+8qR/7xuCqPBfJeK1rvNCKecRmhzDOr5iA/i8VA0=",
+        "owner": "catppuccin",
+        "repo": "nix",
+        "rev": "85558d1638a65ed1cc7fb8bd7cfc1a5474b21fdb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "catppuccin",
+        "repo": "nix",
+        "type": "github"
+      }
+    },
     "flatpaks": {
       "inputs": {
         "nixpkgs": "nixpkgs",
@@ -107,6 +122,7 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "flatpaks": "flatpaks",
         "home-manager": "home-manager",
         "nixos-hardware": "nixos-hardware",

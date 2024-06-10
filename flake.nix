@@ -19,13 +19,11 @@
     nixos-hardware,
     home-manager,
     ...
-  }: let
-    system = "x86_64-linux";
-  in {
+  }: {
     nixosConfigurations = {
       #atreides is the name of one configuration
       atreides = nixpkgs.lib.nixosSystem {
-        system = "${system}";
+        system = "x86_64-linux";
 
         modules = [
           ./machines/atreides/atreides.nix

@@ -1,4 +1,8 @@
-{...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   options = {
     theming.enable = lib.mkEnableOption "global theming toggle";
   };

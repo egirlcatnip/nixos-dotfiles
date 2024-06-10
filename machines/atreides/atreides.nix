@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./../core # Global configs for all systems
     ./hardware.nix # Disk layout *only* for "atreides"

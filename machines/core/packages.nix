@@ -8,4 +8,7 @@
     vscode
     alejandra
   ];
+
+  # Enable flatpak support
+  services.flatpak.enable = true;
 }

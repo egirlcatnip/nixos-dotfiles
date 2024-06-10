@@ -11,6 +11,7 @@
     ./layout.nix
     ./packages.nix
     ./cleanup.nix
+    ./theming.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

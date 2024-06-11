@@ -7,6 +7,4 @@
       example = "paul_atreides";
     };
   };
-
-  config.username = "egirlcatnip";
 }

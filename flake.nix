@@ -7,6 +7,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -22,6 +23,7 @@
     nixpkgs-unstable,
     nixos-hardware,
     nix-flatpak,
+    nix-vscode-extensions,
     catppuccin,
     home-manager,
     ...
@@ -37,12 +39,13 @@
 
           # Configuration for the machine
           ./machines/atreides/atreides.nix
-          ./configuration/home-manager
+          #./configuration/home-manager
 
           # Tools used
           home-manager.nixosModules.home-manager
           nix-flatpak.nixosModules.nix-flatpak
           catppuccin.nixosModules.catppuccin
+          nix-vscode-extensions.nixosModules.nix-vscode-extensions
         ];
       };
     };

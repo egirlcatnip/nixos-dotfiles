@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   username = "egirlcatnip";
 in {
   home.stateVersion = "23.11";
@@ -16,6 +12,5 @@ in {
   ];
 
   imports = [
-    ./vscode.nix
   ];
 }

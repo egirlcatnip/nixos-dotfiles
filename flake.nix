@@ -6,7 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixos-hardware.url = "github:nixos/nixos-hardware/master";
 
-    flatpaks.url = "github:GermanBread/declarative-flatpak/stable";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -21,7 +21,7 @@
     nixpkgs,
     nixpkgs-unstable,
     nixos-hardware,
-    flatpaks,
+    nix-flatpak,
     catppuccin,
     home-manager,
     ...
@@ -41,7 +41,7 @@
 
           # Tools used
           home-manager.nixosModules.home-manager
-          flatpaks.nixosModules.default
+          nix-flatpak.nixosModules.nix-flatpak
           catppuccin.nixosModules.catppuccin
         ];
       };

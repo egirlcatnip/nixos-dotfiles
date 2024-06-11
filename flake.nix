@@ -32,11 +32,17 @@
         system = "x86_64-linux";
 
         modules = [
+          # Place to configure the username
+          ./configuration.nix
+
+          # Configuration for the machine
           ./machines/atreides/atreides.nix
+          ./configuration/home-manager
+
+          # Tools used
+          home-manager.nixosModules.home-manager
           flatpaks.nixosModules.default
           catppuccin.nixosModules.catppuccin
-
-          # ./home.nix # todo!
         ];
       };
     };

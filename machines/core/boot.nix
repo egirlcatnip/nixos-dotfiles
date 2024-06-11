@@ -8,6 +8,7 @@
     systemdboot.enable = lib.mkEnableOption "enable the systemdboot bootloader";
     plymouth.enable = lib.mkEnableOption "enable plymouth boot animation";
     silent_boot.enable = lib.mkEnableOption "enable plymouth boot animation";
+    custom_nixos_label.enable = lib.mkEnableOption "enable personal nixos boot entry label";
   };
 
   config = lib.mkMerge [
@@ -22,7 +23,7 @@
       boot.loader.grub = {
         enable = true;
         efiSupport = true;
-        device = "nodev";
+        #device = "/dev/nvme";
       };
 
       boot.loader.efi = {
@@ -49,7 +50,12 @@
       };
     })
 
+    (lib.mkIf config.custom_nixos_label.enable {
+      system.nixos.label = (builtins.concatStringsSep "-" (builtins.sort (x: y: x < y) config.system.nixos.tags)) + config.system.nixos.version + "aa";
+    })
+
     (lib.mkIf config.silent_boot.enable {
+      boot.loader.grub.timeoutStyle = "hidden";
       boot.consoleLogLevel = 0;
       boot.initrd.verbose = false;
       boot.kernelParams = [

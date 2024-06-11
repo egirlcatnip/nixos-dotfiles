@@ -4,6 +4,7 @@
     ./hardware.nix # Disk layout *only* for "atreides"
     ./packages.nix # Packages *only* for "atreides"
   ];
+  system.stateVersion = "23.11"; # Do not edit
 
   networking.hostName = "atreides";
 
@@ -11,14 +12,16 @@
   services.thermald.enable = true;
   zramSwap.enable = true;
 
-  system.stateVersion = "23.11"; # Do not edit
-
   # Choose only one bootloader!
-  grub.enable = false;
-  systemdboot.enable = true;
+  grub.enable = true;
+  boot.loader.grub.device = "nodev"; # USE YOUR OWN!!
+  systemdboot.enable = false;
+
+  #Enable custom boot-entry label
+  custom_nixos_label.enable = true;
 
   # Plymouth
-  plymouth.enable = true;
+  plymouth.enable = false;
 
   # Silent Boot
   silent_boot.enable = true;
@@ -32,11 +35,15 @@
   # Enable my personal keyboard layout
   layout.enable = true;
 
+  # Theming
+  theming.enable = true;
+
   # Personal Gnome configuration:
 
   services.xserver.excludePackages = [pkgs.xterm];
   environment.gnome.excludePackages = with pkgs; [
     gnome-connections # remote desktop
+    gnome-console
     gnome-tour
     gnome.geary # mail
     gnome.gnome-contacts

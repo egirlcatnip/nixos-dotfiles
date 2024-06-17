@@ -706,10 +706,5 @@
     "key": "ctrl+-",
     "command": "easyTerminalZoom.zoomOut",
     "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+shift+d",
-    "command": "editor.action.duplicateSelection",
-    "when": "editorTextFocus && !editorReadonly"
   }
 ]

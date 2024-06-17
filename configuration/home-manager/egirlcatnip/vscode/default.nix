@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  dotfiles,
+  ...
+}: {
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [

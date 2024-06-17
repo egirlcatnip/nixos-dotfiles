@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   home.stateVersion = "23.11";
   home.username = "egirlcatnip";
   home.homeDirectory = "/home/egirlcatnip";
@@ -8,6 +8,7 @@
     ./vscode
     ./gtk.nix
     ./gnome.nix
+    ./chrome.nix
   ];
 
   programs.fastfetch = {

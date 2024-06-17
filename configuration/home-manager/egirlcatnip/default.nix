@@ -7,6 +7,7 @@
   imports = [
     ./vscode
     ./gtk.nix
+    ./gnome.nix
   ];
 
   programs.fastfetch = {

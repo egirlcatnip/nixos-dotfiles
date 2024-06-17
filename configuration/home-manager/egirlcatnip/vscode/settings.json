@@ -3,7 +3,6 @@
     "workbench.colorTheme": "Catppuccin Mocha",
     "workbench.preferredLightColorTheme": "Catppuccin Latte",
     "workbench.preferredDarkColorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-perfect-mocha",
     "window.autoDetectColorScheme": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 10,
@@ -32,7 +31,6 @@
     "catppuccin.accentColor": "lavender",
     "telemetry.telemetryLevel": "off",
     "intelephense.telemetry.enabled": false,
-    "workbench.productIconTheme": "adwaita",
     "file-browser.hideIgnoredFiles": true,
     "file-browser.labelIgnoredFiles": true,
     "catppuccin-icons.hidesExplorerArrows": true,
@@ -49,4 +47,6 @@
     "window.dialogStyle": "custom",
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.diagnostics.styleLints.enable": true,
+    "nix.serverPath": "nixd",
+    "nix.enableLanguageServer": true
 }

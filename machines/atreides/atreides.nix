@@ -21,7 +21,7 @@
   custom_nixos_label.enable = true;
 
   # Plymouth
-  plymouth.enable = false;
+  plymouth.enable = true;
 
   # Silent Boot
   silent_boot.enable = true;

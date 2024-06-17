@@ -1,8 +1,15 @@
-{config, ...}: let
-  username = "egirlcatnip";
-in {
+{
+  username,
+  dotfiles,
+  ...
+}: {
   home-manager.useGlobalPkgs = true;
+
   home-manager.useUserPackages = true;
 
-  home-manager.users.${username} = import ./${username}/default.nix;
+  home-manager.users.egirlcatnip = {
+    imports = [
+      ./egirlcatnip
+    ];
+  };
 }

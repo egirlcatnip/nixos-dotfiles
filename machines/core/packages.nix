@@ -16,9 +16,5 @@
     ptyxis
     vscode
     armcord
-
-    morewaita-icon-theme
-    adw-gtk3
-    apple-cursor
   ];
 }

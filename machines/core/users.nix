@@ -5,7 +5,7 @@
 }: {
   users = {
     users.${username} = {
-      description = "${username} - main user";
+      description = "${username}";
       extraGroups = ["wheel"];
       isNormalUser = true;
       shell = pkgs.zsh;

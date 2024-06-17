@@ -1,10 +1,9 @@
 {
   lib,
   config,
+  dotfiles,
   ...
-}: let
-  symbols = ./../../dotfiles/.config/xkb/symbols/egirlcattype;
-in {
+}: {
   options = {
     layout.enable = lib.mkEnableOption "personal keyboard layout";
   };
@@ -15,7 +14,7 @@ in {
       egirlcattype = {
         description = "Slovak (egirlcattype)";
         languages = ["sk"];
-        symbolsFile = "${symbols}";
+        symbolsFile = "${dotfiles}/.config/xkb/symbols/egirlcattype";
       };
     };
 

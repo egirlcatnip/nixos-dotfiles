@@ -6,24 +6,8 @@
 
   imports = [
     ./vscode
+    ./gtk.nix
   ];
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "adw-gtk3";
-      package = pkgs.adw-gtk3;
-    };
-
-    cursorTheme = {
-      name = "Apple Cursor";
-      package = pkgs.apple-cursor;
-    };
-    iconTheme = {
-      name = "MoreWaita";
-      package = pkgs.morewaita-icon-theme;
-    };
-  };
 
   programs.fastfetch = {
     enable = true;

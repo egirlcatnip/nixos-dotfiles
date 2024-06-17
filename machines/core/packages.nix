@@ -4,10 +4,16 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    git
     alejandra
-    nixd
-    nh
+    bat
+    eza
     ffmpeg_7-full
+    firefox
+    git
+    google-chrome
+    nh
+    nixd
+    ptyxis
+    vscode
   ];
 }

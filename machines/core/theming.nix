@@ -9,7 +9,7 @@
 
   config = lib.mkIf config.theming.enable {
     catppuccin.enable = true;
-    boot.loader.grub.catppuccin.enable = false;
+    #boot.loader.grub.catppuccin.enable = true;
     catppuccin.accent = "lavender";
     catppuccin.flavor = "mocha";
   };

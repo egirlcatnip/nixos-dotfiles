@@ -3,8 +3,5 @@
 {
   environment.systemPackages = with pkgs; [
     blackbox-terminal
-    ptyxis
-    eza
-    bat
   ];
 }

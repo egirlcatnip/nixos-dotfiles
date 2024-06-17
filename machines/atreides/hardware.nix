@@ -16,7 +16,7 @@
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
 
-  fileSystems."/root" = {
+  fileSystems."/" = {
     device = "/dev/disk/by-uuid/8225b9e0-f7db-4fd3-a615-41673bce2f50";
     fsType = "btrfs";
     options = ["subvol=@"];

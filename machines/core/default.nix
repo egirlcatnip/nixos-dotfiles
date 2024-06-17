@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{...}:
 # Import global configuration
 {
   imports = [

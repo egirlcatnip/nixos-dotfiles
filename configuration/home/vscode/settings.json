@@ -53,5 +53,6 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "workbench.startupEditor": "none",
-    "workbench.iconTheme": "catppuccin-mocha"
+    "workbench.iconTheme": "catppuccin-mocha",
+    "explorer.compactFolders": false
 }

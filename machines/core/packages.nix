@@ -17,5 +17,6 @@
     vscode
     armcord
     fastfetch
+    starship
   ];
 }

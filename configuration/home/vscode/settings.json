@@ -51,5 +51,6 @@
     "nix.enableLanguageServer": true,
     "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
+    "workbench.startupEditor": "none"
 }

@@ -22,7 +22,7 @@
         "AUTO_CD"
       ];
 
-      histFile = "$HOME/.zsh_history";
+      histFile = "$XDG_CONFIG_HOME/zsh/history";
       histSize = 10000;
 
       autosuggestions.enable = true;

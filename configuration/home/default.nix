@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  dotfiles,
+  ...
+}: {
   home-manager.useGlobalPkgs = true;
 
   home-manager.useUserPackages = true;
@@ -17,8 +21,11 @@
     home.homeDirectory = "/home/${username}";
     programs.home-manager.enable = true;
 
-    programs.fastfetch = {
-      enable = true;
+    # Fastfetch
+    home.file = {
+      ".config/fastfetch/" = {
+        source = "${dotfiles}/.config/fastfetch";
+      };
     };
   };
 }

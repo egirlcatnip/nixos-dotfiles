@@ -1,4 +1,5 @@
 {
+  dotfiles,
   nix-vscode-extensions,
   pkgs,
   ...
@@ -39,12 +40,8 @@ in {
   };
 
   home.file = {
-    ".config/Code/User/keybindings.json" = {
-      source = ./keybindings.json;
-    };
-
-    ".config/Code/User/settings.json" = {
-      source = ./settings.json;
+    ".config/Code/User/" = {
+      source = "${dotfiles}/.config/Code/User";
     };
   };
 }

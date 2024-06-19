@@ -16,5 +16,6 @@
     ptyxis
     vscode
     armcord
+    fastfetch
   ];
 }

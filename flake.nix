@@ -24,8 +24,6 @@
     nixosConfigurations = {
       #atreides is the name of one configuration
       atreides = nixpkgs.lib.nixosSystem {
-        #inherit inputs;
-
         specialArgs = {
           username = "egirlcatnip";
           dotfiles = ./dotfiles;

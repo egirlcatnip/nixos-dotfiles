@@ -7,7 +7,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 10,
     "editor.cursorWidth": 2,
-    "editor.fontFamily": "'monospace', 'monospace', monospace",
+    "editor.fontFamily": "JetBrainsMono NF, JetBrains Mono, JetBrainsMono, monospace",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
@@ -54,5 +54,6 @@
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "catppuccin-mocha",
     "explorer.compactFolders": false,
-    "security.workspace.trust.enabled": false
+    "security.workspace.trust.enabled": false,
+    "explorer.confirmDelete": false
 }

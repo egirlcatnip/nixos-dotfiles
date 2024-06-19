@@ -12,8 +12,4 @@
       "x-scheme-handler/about" = "google-chrome.desktop";
     };
   };
-  xdg.terminal-exec = {
-    enable = true;
-    package = "org.gnome.Ptyxis.desktop";
-  };
 }

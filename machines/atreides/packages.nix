@@ -3,5 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     blackbox-terminal
+    gnome.dconf-editor
   ];
 }

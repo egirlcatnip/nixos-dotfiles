@@ -49,5 +49,6 @@
     "rust-analyzer.diagnostics.styleLints.enable": true,
     "nix.serverPath": "nixd",
     "nix.enableLanguageServer": true,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "git.confirmSync": false
 }

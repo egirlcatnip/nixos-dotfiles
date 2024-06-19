@@ -15,6 +15,7 @@
     ./shell.nix
     ./env.nix
     ./fonts.nix
+    ./mime.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];

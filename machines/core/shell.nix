@@ -26,8 +26,8 @@
       histFile = "~/.zsh_history";
       histSize = 10000;
 
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
+      #autosuggestions.enable = true;
+      #syntaxHighlighting.enable = true;
     };
   };
 }

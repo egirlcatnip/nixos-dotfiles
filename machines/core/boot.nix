@@ -60,7 +60,7 @@
       boot.initrd.verbose = false;
       boot.kernelParams = [
         "quiet"
-        "splash"
+        #"splash"
         "boot.shell_on_fail"
         "loglevel=3"
         "rd.systemd.show_status=false"

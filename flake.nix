@@ -40,7 +40,7 @@
           # Configuration for the machine
           ./machines/atreides/atreides.nix
           # ~ Configuration for the machine
-          ./configuration/home-manager
+          ./configuration
 
           # Tools used
           home-manager.nixosModules.home-manager

@@ -4,7 +4,6 @@
   imports = [
     ./audio.nix
     ./boot.nix
-    ./cleanup.nix
     ./desktop.nix
     ./flatpak.nix
     ./layout.nix

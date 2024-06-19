@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   imports = [
     ./../core # Global configs for all systems
     ./hardware.nix # Disk layout *only* for "atreides"
@@ -31,28 +31,9 @@
   kde.enable = false;
 
   ## Personal configuraiton
-
   # Enable my personal keyboard layout
   layout.enable = true;
 
   # Theming
   theming.enable = true;
-
-  # Personal Gnome configuration:
-
-  services.xserver.excludePackages = [pkgs.xterm];
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-connections # remote desktop
-    gnome-console
-    gnome-tour
-    gnome.geary # mail
-    gnome.gnome-contacts
-    gnome.gnome-contacts
-    gnome.gnome-maps
-    gnome.gnome-music
-    gnome.seahorse # passwords
-    gnome.simple-scan # doc scan
-    gnome.totem # gnome video player
-    gnome.yelp # gnome help
-  ];
 }

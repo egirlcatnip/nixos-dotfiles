@@ -8,9 +8,9 @@
     bat
     eza
     ffmpeg_7-full
-    firefox
+
     git
-    google-chrome
+
     nh
     nixd
     ptyxis
@@ -18,5 +18,9 @@
     armcord
     fastfetch
     starship
+
+    zsh
+    zoxide
+    fzf
   ];
 }

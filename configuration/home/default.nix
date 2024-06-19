@@ -27,5 +27,12 @@
         source = "${dotfiles}/.config/fastfetch";
       };
     };
+
+    # Starship
+    home.file = {
+      ".config/starship/" = {
+        source = "${dotfiles}/.config/starship";
+      };
+    };
   };
 }

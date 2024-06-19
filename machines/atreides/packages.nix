@@ -2,7 +2,9 @@
 # Packages only for machine "atreides"
 {
   environment.systemPackages = with pkgs; [
-    blackbox-terminal
+    armcord
     gnome.dconf-editor
+    google-chrome
+    firefox
   ];
 }

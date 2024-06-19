@@ -47,7 +47,7 @@
     };
 
     # Fonts
-    "/org/gnome/desktop/interface/" = {
+    "org/gnome/desktop/interface" = {
       font-name = "JetBrainsMono NF 11";
       document-font-name = "JetBrainsMono NF 11";
       monospace-font-name = "JetBrainsMono NF 11";

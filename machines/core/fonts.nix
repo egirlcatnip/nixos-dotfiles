@@ -3,8 +3,6 @@
 
   fonts = {
     enableDefaultPackages = true;
-    fontDir = true;
-
     fontconfig = {
       antialias = true;
       cache32Bit = true;

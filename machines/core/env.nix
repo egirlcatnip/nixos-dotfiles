@@ -13,22 +13,24 @@
     TERMINAL = "blackbox";
 
     # XDG Ninja
-    #ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
-    #HISTFILE = "$XDG_CONFIG_HOME/zsh/history";
+    ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
     GTK2_RC_FILES = "$XDG_CONFIG_HOME/gtk-2.0/gtkrc";
-
+    GNUPGHOME = "$XDG_DATA_HOME/gnupg";
     # Starship config
     STARSHIP_CONFIG = "$XDG_CONFIG_HOME/starship/starship.toml";
 
     # FZF
     FZF_DEFAULT_OPTS = ''
-      #--scroll-off=10
-      #--height=80%
-      --border="rounded"
+      --scroll-off=10
+      --min-height=10
+      --layout=reverse
+
+      --border=thinblock
       --marker='('
       --pointer='>'
+      --prompt=' '
       --info="right"
-      --color=bg+:-1,bg:-1,fg:0,fg+:3,hl:2,hl+:2,header:0,info:1,pointer:1,marker:4,prompt:0,spinner:3,border:0
+      --color=bg:-1,bg+:-1,fg:-1,fg+:3,hl:2,hl+:2,header:-1,info:1,pointer:1,marker:-1,prompt:-1,spinner:3,border:-1
     '';
   };
 }

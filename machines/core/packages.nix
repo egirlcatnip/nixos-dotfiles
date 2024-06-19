@@ -21,6 +21,8 @@
     fastfetch
     starship
 
+    btop
+    rocmPackages.rocm-smi
     zsh
     zoxide
     fzf

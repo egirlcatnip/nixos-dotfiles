@@ -43,7 +43,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Terminal";
       binding = "<Super>t";
-      command = "xdg-terminal";
+      command = "bash -c $TERMINAL";
     };
 
     # Fonts

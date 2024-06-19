@@ -24,7 +24,7 @@
   plymouth.enable = true;
 
   # Silent Boot
-  silent_boot.enable = true;
+  silent_boot.enable = false;
 
   # Choose only one Desktop Enviroment
   gnome.enable = true;

@@ -9,7 +9,7 @@
     ./gtk.nix
     ./gnome.nix
     ./chrome.nix
-    ./minetypes.nix
+    ./mimetypes.nix
   ];
 
   programs.fastfetch = {

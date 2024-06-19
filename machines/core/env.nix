@@ -1,5 +1,5 @@
 {...}: {
-  environment.sessionVariables = {
+  environment.variables = rec {
     # XDG Base dir specification
     XDG_CACHE_HOME = "$HOME/.cache";
     XDG_CONFIG_HOME = "$HOME/.config";
@@ -8,8 +8,8 @@
 
     # XDG Ninja
 
-    ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
-    #HISTFILE = "$XDG_CONFIG_HOME/zsh/history";
+    # ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
+    # HISTFILE = "$XDG_CONFIG_HOME/zsh/history";
 
     GTK2_RC_FILES = "$XDG_CONFIG_HOME/gtk-2.0/gtkrc";
 

@@ -49,10 +49,10 @@
     "rust-analyzer.diagnostics.styleLints.enable": true,
     "nix.serverPath": "nixd",
     "nix.enableLanguageServer": true,
-    "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "catppuccin-mocha",
-    "explorer.compactFolders": false
+    "explorer.compactFolders": false,
+    "security.workspace.trust.enabled": false
 }

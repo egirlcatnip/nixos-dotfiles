@@ -39,11 +39,21 @@ in {
     ]);
     */
   };
-
+ 
+  
   home.file = {
-    ".config/Code/User/" = {
-      #source = "${dotfiles}/.config/Code/User";
-      source = ./../../../dotfiles/.config/Code/User;
+    ".config/Code/User/keybindings.json" = {
+      #source = "${dotfiles}/.config/Code/User/keybindings.json";
+      source = ./keybindings.json;
+    };
+    };
+   
+   home.file = {
+    ".config/Code/User/settings.json" = {
+
+      source =./settings.json;
     };
   };
+  
+  
 }

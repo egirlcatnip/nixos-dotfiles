@@ -1,10 +1,16 @@
 {
+  nix-vscode-extensions,
   pkgs,
-  dotfiles,
   ...
-}: {
+}: let
+  #marketplace = nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
+  #marketplace-release = nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace-release;
+in {
   programs.vscode = {
     enable = true;
+    enableExtensionUpdateCheck = true;
+    mutableExtensionsDir = true;
+
     extensions = with pkgs.vscode-extensions; [
       catppuccin.catppuccin-vsc
       catppuccin.catppuccin-vsc-icons
@@ -18,10 +24,18 @@
       rust-lang.rust-analyzer
       tamasfe.even-better-toml
       #dustypomerleau.rust-syntax
-
       kamadorueda.alejandra
       jnoortheen.nix-ide
     ];
+
+    /*
+    ++ (with marketplace; [
+      ionutvmi.path-autocomplete
+      qcz.text-power-tools
+      hideoo.toggler
+      dustypomerleau.rust-syntax
+    ]);
+    */
   };
 
   home.file = {

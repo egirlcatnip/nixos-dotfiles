@@ -22,5 +22,6 @@
     zsh
     zoxide
     fzf
+    gh
   ];
 }

@@ -24,6 +24,7 @@ in {
 
       rust-lang.rust-analyzer
       tamasfe.even-better-toml
+      bodil.file-browser
       #dustypomerleau.rust-syntax
       kamadorueda.alejandra
       jnoortheen.nix-ide

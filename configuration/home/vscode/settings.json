@@ -52,5 +52,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "catppuccin-mocha"
 }

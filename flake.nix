@@ -16,7 +16,7 @@
     #nixpkgs-unstable,
     #nixos-hardware,
     nix-flatpak,
-    nix-vscode-extensions,
+    #nix-vscode-extensions,
     catppuccin,
     home-manager,
     ...

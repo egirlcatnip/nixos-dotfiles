@@ -1,6 +1,6 @@
 {
-  dotfiles,
-  nix-vscode-extensions,
+  #dotfiles,
+  #nix-vscode-extensions,
   pkgs,
   ...
 }: let
@@ -42,7 +42,8 @@ in {
 
   home.file = {
     ".config/Code/User/" = {
-      source = "${dotfiles}/.config/Code/User";
+      #source = "${dotfiles}/.config/Code/User";
+      source = ./../../../dotfiles/.config/Code/User;
     };
   };
 }

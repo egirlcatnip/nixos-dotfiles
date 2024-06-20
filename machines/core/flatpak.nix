@@ -1,6 +1,13 @@
-{...}: {
+{pkgs, ...}: {
   # Enable flatpak support
   services.flatpak.enable = true;
+  services.flatpak.update.onActivation = false;
+
+  systemd.services."flatpak-managed-install" = {
+    serviceConfig = {
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 5";
+    };
+  };
 
   # Add flathub as a remote
   services.flatpak.remotes = [
@@ -10,7 +17,7 @@
     }
     {
       name = "flathub-beta";
-      location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+      location = "https://dl.flathub.org/beta-repo/flathub-beta.flatpakrepo";
     }
   ];
 }

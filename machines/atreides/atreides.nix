@@ -18,13 +18,12 @@
   # Choose only one bootloader!
   grub.enable = true;
   boot.loader.grub.device = "nodev"; # USE YOUR OWN!!
+
   systemdboot.enable = false;
 
   # Plymouth
-  plymouth.enable = false;
-
-  # Silent Boot
-  silent_boot.enable = false;
+  silentboot.enable = true;
+  boot.kernelModules = ["kvm-amd"];
 
   # Choose only one Desktop Enviroment
   gnome.enable = true;

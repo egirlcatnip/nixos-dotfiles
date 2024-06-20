@@ -1,4 +1,8 @@
 {...}: {
+  imports = [
+    ./extensions.nix
+  ];
+
   programs.gnome-shell = {
     enable = false;
   };
@@ -43,9 +47,9 @@
 
     # Fonts
     "org/gnome/desktop/interface" = {
-      font-name = "JetBrainsMono NF 11";
-      document-font-name = "JetBrainsMono NF 11";
-      monospace-font-name = "JetBrainsMono NF 11";
+      font-name = "JetBrainsMono 11";
+      document-font-name = "JetBrainsMono 11";
+      monospace-font-name = "JetBrainsMono 11";
     };
   };
 }

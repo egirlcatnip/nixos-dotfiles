@@ -11,7 +11,7 @@
     imports = [
       ./vscode
       ./gtk.nix
-      ./gnome.nix
+      ./gnome
       ./chrome.nix
     ];
 

@@ -1,7 +1,6 @@
 {...}: {
   imports = [
     ./extensions.nix
-    ./theming.nix
   ];
 
   dconf.enable = true;

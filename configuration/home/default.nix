@@ -13,6 +13,7 @@
       ./gtk.nix
       ./gnome
       ./chrome.nix
+      ./theming.nix
     ];
 
     home.stateVersion = "23.11";

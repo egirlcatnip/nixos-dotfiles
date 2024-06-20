@@ -28,7 +28,7 @@
     };
 
     "org/gnome/shell/keybindings" = {
-      screenshot = ["<Ctrl><Shift>s"];
+      screenshot = ["<Super><Shift>s"];
       screenshot-window = ["<Ctrl><Shift><Alt>s"];
     };
 
@@ -47,9 +47,9 @@
 
     # Fonts
     "org/gnome/desktop/interface" = {
-      font-name = "JetBrainsMono 11";
-      document-font-name = "JetBrainsMono 11";
-      monospace-font-name = "JetBrainsMono 11";
+      font-name = "JetBrainsMono Nerd Font Mono 11";
+      document-font-name = "JetBrainsMono Nerd Font Mono 12";
+      monospace-font-name = "JetBrainsMono Nerd Font Mono 12";
     };
   };
 }

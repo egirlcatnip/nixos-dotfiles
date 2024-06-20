@@ -24,6 +24,7 @@
     vscode
     zoxide
     zsh
+    gnome-extension-manager
 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-panel

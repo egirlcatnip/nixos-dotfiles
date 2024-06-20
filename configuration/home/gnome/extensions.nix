@@ -1,9 +1,4 @@
 {pkgs, ...}: {
-  programs.gnome-shell.extensions = with pkgs.gnomeExtensions; [
-    {package = dash-to-panel;}
-    {package = blur-my-shell;}
-  ];
-
   dconf = {
     enable = true;
     settings."org/gnome/shell" = {

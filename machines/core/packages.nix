@@ -15,7 +15,6 @@
     nh
     nixd
     ptyxis
-    blackbox-terminal
     vscode
     armcord
     fastfetch

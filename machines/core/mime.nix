@@ -1,12 +1,4 @@
 {...}: {
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      GNOME = ["com.raggesilver.BlackBox.desktop"];
-      KDE = ["org.kde.console.desktop"];
-      default = ["com.raggesilver.BlackBox.desktop" "org.gnome.Ptyxis.desktop"];
-    };
-  };
   xdg.mime = {
     enable = true;
 

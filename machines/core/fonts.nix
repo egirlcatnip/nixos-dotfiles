@@ -3,12 +3,6 @@
 
   fonts = {
     enableDefaultPackages = true;
-    fontconfig = {
-      antialias = true;
-      cache32Bit = true;
-      hinting.autohint = true;
-      hinting.enable = true;
-    };
 
     packages = with pkgs; [(nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})];
   };

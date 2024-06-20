@@ -10,18 +10,15 @@
     # Default programs
     EDITOR = "code";
     BROWSER = "google-chrome";
-    TERMINAL = "blackbox";
+    TERMINAL = "ptyxis";
 
     # XDG Ninja
     ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
-    GTK2_RC_FILES = "$XDG_CONFIG_HOME/gtk-2.0/gtkrc";
     GNUPGHOME = "$XDG_DATA_HOME/gnupg";
+
     # Starship config
-    STARSHIP_CONFIG = "$XDG_CONFIG_HOME/starship/starship.toml";
 
     # FZF
-    #      --border=thinblock
-
     FZF_DEFAULT_OPTS = ''
       --scroll-off=10
       --min-height=10

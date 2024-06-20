@@ -7,14 +7,17 @@
       promptInit = " eval \"$(starship init zsh)\" ";
 
       interactiveShellInit = ''
-        source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
+        export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+        export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
+        source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
 
-
+        # autocomplete
         autoload -Uz compinit && compinit
         compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
+        # Ignore caps on autocomplete
         zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
       '';
 

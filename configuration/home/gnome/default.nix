@@ -47,9 +47,9 @@
 
     # Fonts
     "org/gnome/desktop/interface" = {
-      font-name = "JetBrainsMono Nerd Font Mono 11";
-      document-font-name = "JetBrainsMono Nerd Font Mono 12";
-      monospace-font-name = "JetBrainsMono Nerd Font Mono 12";
+      font-name = "JetBrainsMono Nerd Font 11";
+      document-font-name = "JetBrainsMono Nerd Font 11";
+      monospace-font-name = "JetBrainsMono Nerd Font 11";
     };
   };
 }

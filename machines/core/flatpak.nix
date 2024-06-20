@@ -9,7 +9,7 @@
     };
   };
 
-  # Add flathub as a remote
+  # Add flathub and flathub beta as a remote
   services.flatpak.remotes = [
     {
       name = "flathub";

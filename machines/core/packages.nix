@@ -5,27 +5,28 @@
 
   environment.systemPackages = with pkgs; [
     alejandra
+    armcord
     bat
+    btop
     eza
+    fastfetch
     ffmpeg_7-full
-    google-chrome
-
+    fzf
+    gh
     git
-
+    gnome.adwaita-icon-theme
+    google-chrome
     nh
     nixd
     ptyxis
-    vscode
-    armcord
-    fastfetch
-    starship
-
-    btop
     rocmPackages.rocm-smi
-    zsh
+    starship
+    vscode
     zoxide
-    fzf
-    gh
+    zsh
+
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.dash-to-panel
   ];
 
   services.xserver.excludePackages = [pkgs.xterm];

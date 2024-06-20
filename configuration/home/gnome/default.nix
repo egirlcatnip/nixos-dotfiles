@@ -3,10 +3,6 @@
     ./extensions.nix
   ];
 
-  programs.gnome-shell = {
-    enable = false;
-  };
-
   dconf.enable = true;
 
   dconf.settings = {

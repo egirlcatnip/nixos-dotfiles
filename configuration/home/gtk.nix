@@ -7,7 +7,7 @@
     };
 
     cursorTheme = {
-      name = "Apple";
+      name = "macOS-Monterey";
       size = 12;
       package = pkgs.apple-cursor;
     };

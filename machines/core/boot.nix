@@ -8,7 +8,6 @@
     systemdboot.enable = lib.mkEnableOption "enable the systemdboot bootloader";
     plymouth.enable = lib.mkEnableOption "enable plymouth boot animation";
     silent_boot.enable = lib.mkEnableOption "enable silent boot";
-    custom_nixos_label.enable = lib.mkEnableOption "enable personal nixos boot entry label";
   };
 
   config = lib.mkMerge [
@@ -47,37 +46,18 @@
     (lib.mkIf config.plymouth.enable {
       boot = {
         plymouth.enable = true;
-        consoleLogLevel = 0;
-        initrd.verbose = false;
-        kernelParams = [
-          "quiet"
-          "splash"
-          "boot.shell_on_fail"
-          "loglevel=3"
-          "rd.systemd.show_status=false"
-          "rd.udev.log_level=3"
-          "udev.log_priority=3"
-        ];
       };
     })
 
-    (lib.mkIf config.custom_nixos_label.enable {
-      system.nixos.label = (builtins.concatStringsSep "-" (builtins.sort (x: y: x < y) config.system.nixos.tags)) + config.system.nixos.version + "aa";
-    })
-
     (lib.mkIf config.silent_boot.enable {
-      boot.loader.grub.timeoutStyle = "hidden";
-      boot.consoleLogLevel = 0;
-      boot.initrd.verbose = false;
-      boot.kernelParams = [
-        "quiet"
-        "splash"
-        "boot.shell_on_fail"
-        "loglevel=3"
-        "rd.systemd.show_status=false"
-        "rd.udev.log_level=3"
-        "udev.log_priority=3"
-      ];
+      boot = {
+        #consoleLogLevel = 4;
+        
+        kernelParams = [
+          "quiet"
+        ];
+
+      };
     })
   ];
 }

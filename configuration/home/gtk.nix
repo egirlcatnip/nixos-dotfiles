@@ -7,7 +7,7 @@
     };
 
     cursorTheme = {
-      name = "Apple Cursor";
+      name = "Apple";
       size = 12;
       package = pkgs.apple-cursor;
     };

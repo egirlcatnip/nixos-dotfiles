@@ -1,11 +1,6 @@
 {...}: {
   programs.gnome-shell = {
     enable = false;
-
-    theme = {
-      name = "";
-      package = "";
-    };
   };
 
   dconf.enable = true;

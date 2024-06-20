@@ -20,12 +20,13 @@
     STARSHIP_CONFIG = "$XDG_CONFIG_HOME/starship/starship.toml";
 
     # FZF
+    #      --border=thinblock
+
     FZF_DEFAULT_OPTS = ''
       --scroll-off=10
       --min-height=10
       --layout=reverse
 
-      --border=thinblock
       --marker='('
       --pointer='>'
       --prompt=' '

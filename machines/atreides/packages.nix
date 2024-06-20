@@ -6,5 +6,6 @@
     gnome.dconf-editor
     google-chrome
     firefox
+    gnome.gnome-boxes
   ];
 }

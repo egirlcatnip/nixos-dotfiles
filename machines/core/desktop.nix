@@ -18,7 +18,9 @@
       ];
       services.xserver.enable = true;
       services.xserver.desktopManager.gnome.enable = true;
+
       services.xserver.displayManager.gdm.enable = true;
+      services.displayManager.sddm.enable = false;
     })
 
     (lib.mkIf config.kde.enable {
@@ -31,7 +33,9 @@
 
       services.xserver.enable = true;
       services.desktopManager.plasma6.enable = true;
+
       services.displayManager.sddm.enable = true;
+      services.xserver.displayManager.gdm.enable = false;
     })
   ];
 }

@@ -10,6 +10,9 @@
 
   # Hardware specific options:
   services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.fstrim.enable = true;
+
   zramSwap.enable = true;
 
   # Choose only one bootloader!
@@ -17,11 +20,8 @@
   boot.loader.grub.device = "nodev"; # USE YOUR OWN!!
   systemdboot.enable = false;
 
-  #Enable custom boot-entry label
-  custom_nixos_label.enable = true;
-
   # Plymouth
-  plymouth.enable = true;
+  plymouth.enable = false;
 
   # Silent Boot
   silent_boot.enable = false;

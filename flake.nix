@@ -14,7 +14,7 @@
   outputs = inputs @ {
     nixpkgs,
     #nixpkgs-unstable,
-    #nixos-hardware,
+    nixos-hardware,
     nix-flatpak,
     #nix-vscode-extensions,
     catppuccin,
@@ -28,6 +28,7 @@
           username = "egirlcatnip";
           dotfiles = ./dotfiles;
           system = "x86_64-linux";
+          inherit inputs;
         };
 
         modules = [
@@ -35,6 +36,8 @@
           ./machines/atreides/atreides.nix
           # ~ Configuration for the machine
           ./configuration
+          # NixOS Hardware
+          nixos-hardware.nixosModules.asus-zephyrus-ga402
 
           # Tools used
           home-manager.nixosModules.home-manager

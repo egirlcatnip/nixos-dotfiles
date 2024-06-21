@@ -3,9 +3,9 @@
 {
   environment.systemPackages = with pkgs; [
     armcord
-    gnome.dconf-editor
     google-chrome
     firefox
     gnome.gnome-boxes
+    youtube-music
   ];
 }

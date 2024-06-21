@@ -1,6 +1,7 @@
 {
   username,
   dotfiles,
+  inputs,
   ...
 }: {
   home-manager.useGlobalPkgs = true;
@@ -13,7 +14,7 @@
       ./gtk.nix
       ./gnome
       ./chrome.nix
-      ./theming.nix
+      inputs.catppuccin.homeManagerModules.catppuccin
     ];
 
     home.stateVersion = "23.11";
@@ -32,6 +33,13 @@
     home.file = {
       ".config/starship/" = {
         source = "${dotfiles}/.config/starship";
+      };
+    };
+
+    # YT Music
+    home.file = {
+      ".config/YouTube Music/config.json" = {
+        source = "${dotfiles}/.config/YouTube Music/config.json";
       };
     };
   };

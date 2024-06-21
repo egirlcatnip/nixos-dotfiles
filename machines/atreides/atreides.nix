@@ -9,9 +9,9 @@
   networking.hostName = "atreides";
 
   # Hardware specific options:
-  services.thermald.enable = true;
-  services.auto-cpufreq.enable = true;
-  services.fstrim.enable = true;
+  #services.thermald.enable = true;
+  #services.auto-cpufreq.enable = true;
+  #services.fstrim.enable = true;
 
   zramSwap.enable = true;
 
@@ -23,7 +23,6 @@
 
   # Plymouth
   silentboot.enable = true;
-  boot.kernelModules = ["kvm-amd"];
 
   # Choose only one Desktop Enviroment
   gnome.enable = true;

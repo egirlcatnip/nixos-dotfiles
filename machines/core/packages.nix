@@ -25,6 +25,7 @@
     zoxide
     zsh
     gnome-extension-manager
+    gnome.dconf-editor
 
     gnomeExtensions.blur-my-shell
     gnomeExtensions.dash-to-panel
@@ -36,7 +37,6 @@
     gnome-console
     gnome-tour
     gnome.geary # mail
-    gnome.gnome-contacts
     gnome.gnome-contacts
     gnome.gnome-maps
     gnome.gnome-music

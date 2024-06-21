@@ -1,4 +1,14 @@
 {
+    "window-size": {
+        "width": 960,
+        "height": 800
+    },
+    "window-maximized": false,
+    "window-position": {
+        "x": 480,
+        "y": 200
+    },
+    "url": "https://music.youtube.com",
     "options": {
         "tray": false,
         "appVisible": true,
@@ -36,7 +46,7 @@
                 "volumeUp": "",
                 "volumeDown": ""
             },
-            "savedVolume": 22
+            "savedVolume": 100
         },
         "discord": {
             "enabled": true,
@@ -44,7 +54,7 @@
             "activityTimeoutEnabled": true,
             "activityTimeoutTime": 60000,
             "playOnYouTubeMusic": true,
-            "hideGitHubButton": false,
+            "hideGitHubButton": true,
             "hideDurationLeft": false,
             "listenAlong": true
         },
@@ -89,6 +99,11 @@
             "blocker": "With blocklists",
             "additionalBlockLists": [],
             "disableDefaultLists": false
+        }
+    },
+    "__internal__": {
+        "migrations": {
+            "version": "3.3.6"
         }
     }
 }

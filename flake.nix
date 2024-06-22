@@ -22,7 +22,6 @@
     ...
   }: {
     nixosConfigurations = {
-      #atreides is the name of one configuration
       atreides = nixpkgs.lib.nixosSystem {
         specialArgs = {
           username = "egirlcatnip";
@@ -32,12 +31,14 @@
         };
 
         modules = [
-          # Configuration for the machine
-          ./machines/atreides/atreides.nix
-          # ~ Configuration for the machine
-          ./configuration
-          # NixOS Hardware
+          # Zephyrus G14 2022
           nixos-hardware.nixosModules.asus-zephyrus-ga402
+
+          # Machine specific configuration
+          ./machines/atreides/atreides.nix
+
+          # ~ Home manager configuration
+          ./home
 
           # Tools used
           home-manager.nixosModules.home-manager

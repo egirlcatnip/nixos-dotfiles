@@ -21,7 +21,7 @@
       boot.loader.grub = {
         enable = true;
         efiSupport = true;
-        #device = "/dev/nvme";
+        device = "nodev";
         timeoutStyle = "hidden";
       };
 
@@ -42,6 +42,7 @@
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
     })
+
     (lib.mkIf config.silentboot.enable {
       console.earlySetup = true;
 

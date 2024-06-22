@@ -6,17 +6,23 @@
   dconf.enable = true;
 
   dconf.settings = {
-    # Set windows buttons to MS Windows Style
     "org/gnome/desktop/wm/preferences" = {
+      # Set windows buttons to MS Windows Style
       button-layout = ":minimize,maximize,close";
-
       resize-with-right-button = true;
+    };
+
+    # Fonts
+    "org/gnome/desktop/interface" = {
+      font-name = "JetBrainsMono Nerd Font 11";
+      document-font-name = "JetBrainsMono Nerd Font 11";
+      monospace-font-name = "JetBrainsMono Nerd Font 11";
     };
 
     # Desktop keybindings
     "org/gnome/desktop/wm/keybindings" = {
-      close = ["<Super>q"];
       switch-windows = ["<Alt>Tab"];
+      close = ["<Super>q"];
 
       toggle-maximized = ["<Super>f" "<Super>Up"];
       toggle-fullscreen = ["<Ctrl><Super>f"];
@@ -39,13 +45,6 @@
       name = "Terminal";
       binding = "<Super>t";
       command = "bash -c $TERMINAL";
-    };
-
-    # Fonts
-    "org/gnome/desktop/interface" = {
-      font-name = "JetBrainsMono Nerd Font 11";
-      document-font-name = "JetBrainsMono Nerd Font 11";
-      monospace-font-name = "JetBrainsMono Nerd Font 11";
     };
   };
 }

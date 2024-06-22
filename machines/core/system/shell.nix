@@ -4,9 +4,16 @@
     zsh = {
       enable = true;
 
-      promptInit = " eval \"$(starship init zsh)\" ";
+      # Enable starship prompt
+      promptInit = ''eval "$(starship init zsh)" '';
 
       interactiveShellInit = ''
+        ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
+        HISTFILE = "$XDG_CONFIG_HOME/zsh/history";
+        HISTSIZE = 20000;
+
+
+
         export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
         export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
@@ -32,12 +39,7 @@
         "AUTO_CD"
       ];
 
-      histFile = "$XDG_CONFIG_HOME/zsh/history";
-      #histFile = "~/.zsh_history";
-      histSize = 10000;
-
-      #autosuggestions.enable = true;
-      #syntaxHighlighting.enable = true;
+      syntaxHighlighting.enable = true;
     };
   };
 }

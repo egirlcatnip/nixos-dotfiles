@@ -13,7 +13,6 @@
     TERMINAL = "ptyxis";
 
     # XDG Ninja
-    ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
     GNUPGHOME = "$XDG_DATA_HOME/gnupg";
 
     # Starship config

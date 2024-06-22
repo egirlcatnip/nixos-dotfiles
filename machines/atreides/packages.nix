@@ -7,5 +7,6 @@
     firefox
     gnome.gnome-boxes
     youtube-music
+    armcord
   ];
 }

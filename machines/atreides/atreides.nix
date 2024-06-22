@@ -9,16 +9,13 @@
   networking.hostName = "atreides";
 
   # Hardware specific options:
-  #services.thermald.enable = true;
-  #services.auto-cpufreq.enable = true;
-  #services.fstrim.enable = true;
-
+  services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.fstrim.enable = true;
   zramSwap.enable = true;
 
   # Choose only one bootloader!
   grub.enable = true;
-  boot.loader.grub.device = "nodev"; # USE YOUR OWN!!
-
   systemdboot.enable = false;
 
   # Plymouth

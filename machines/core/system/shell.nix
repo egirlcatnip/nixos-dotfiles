@@ -8,9 +8,9 @@
       promptInit = ''eval "$(starship init zsh)" '';
 
       interactiveShellInit = ''
-        ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
-        HISTFILE = "$XDG_CONFIG_HOME/zsh/history";
-        HISTSIZE = 20000;
+        export ZDOTDIR="$XDG_CONFIG_HOME/zsh";
+        export HISTFILE="$XDG_CONFIG_HOME/zsh/history";
+        export HISTSIZE=20000;
 
 
 

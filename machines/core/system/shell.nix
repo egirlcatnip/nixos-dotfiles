@@ -25,7 +25,15 @@
         eval "$(zoxide init zsh)"
 
         autoload -Uz compinit && compinit
-        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+        zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=* m:{a-z}={A-Za-z}'
+
+        bindkey "^[[1;5C" emacs-forward-word
+        bindkey "^[[1;5D" emacs-backward-word
+        bindkey "^[[3~" delete-char
+        bindkey "^[[3;5~" kill-word
+        bindkey '^H' backward-kill-word
+
+
       '';
 
       loginShellInit = ''
@@ -36,12 +44,15 @@
       '';
 
       setOptions = [
+        "HIST_EXPIRE_DUPS_FIRST"
+        "HIST_IGNORE_SPACE"
+        "HIST_FIND_NO_DUPS"
+        "HIST_SAVE_NO_DUPS"
         "HIST_IGNORE_DUPS"
         "HIST_IGNORE_ALL_DUPS"
         "HIST_FCNTL_LOCK"
         "APPEND_HISTORY"
         "SHARE_HISTORY"
-        "HIST_IGNORE_SPACE"
         "AUTO_CD"
       ];
     };

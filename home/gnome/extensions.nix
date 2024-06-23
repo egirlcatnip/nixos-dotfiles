@@ -7,6 +7,9 @@
         blur-my-shell.extensionUuid
         dash-to-panel.extensionUuid
         light-style.extensionUuid
+        noannoyance-fork.extensionUuid
+        tiling-assistant.extensionUuid
+        light-shell.extensionUuid
       ];
     };
   };

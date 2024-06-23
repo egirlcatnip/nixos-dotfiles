@@ -17,15 +17,12 @@
     # Gnome related
     gnome-extension-manager
     gnome.dconf-editor
-
-    # Gnome extensions
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.dash-to-panel
   ];
 
   # Exclusions
   services.xserver.excludePackages = [pkgs.xterm];
   environment.gnome.excludePackages = with pkgs; [
+    gnome.gnome-shell-extensions
     gnome-connections # remote desktop
     gnome-console
     gnome-tour

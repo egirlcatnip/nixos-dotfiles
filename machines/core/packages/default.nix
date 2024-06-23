@@ -6,5 +6,6 @@
     ./system.nix
     ./flatpak.nix
     ./fonts.nix
+    ./extensions.nix
   ];
 }

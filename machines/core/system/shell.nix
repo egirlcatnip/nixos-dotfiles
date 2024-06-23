@@ -2,7 +2,14 @@
   pkgs,
   dotfiles,
   ...
-}: {
+}: let
+  zsh-shift-select = pkgs.pkgs.fetchFromGitHub {
+    owner = "jirutka";
+    repo = "zsh-shift-select";
+    rev = "da460999b7d31aef0f0a82a3e749d70edf6f2ef9";
+    hash = "sha256-ekA8acUgNT/t2SjSBGJs2Oko5EB7MvVUccC6uuTI/vc=";
+  };
+in {
   # Enable zsh shell
   programs = {
     zsh = {
@@ -22,6 +29,10 @@
 
         source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
+
+        source "${zsh-shift-select}/zsh-shift-select.plugin.zsh"
+
+
         eval "$(zoxide init zsh)"
 
         autoload -Uz compinit && compinit
@@ -65,11 +76,14 @@
   environment.variables = {
     EDITOR = "code";
     BROWSER = "google-chrome-stable";
-    TERM = "xdg-terminal-exec";
   };
+
   xdg.terminal-exec = {
     enable = true;
     settings = {
+      default = [
+        "org.gnome.Ptyxis.desktop"
+      ];
       GNOME = [
         "org.gnome.Ptyxis.desktop"
       ];

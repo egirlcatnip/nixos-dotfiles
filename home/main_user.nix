@@ -3,10 +3,6 @@
   dotfiles,
   ...
 }: {
-  home-manager.useGlobalPkgs = true;
-
-  home-manager.useUserPackages = true;
-  home-manager.backupFileExtension = "backup";
   home-manager.users.${username} = {
     imports = [
       ./vscode
@@ -18,7 +14,8 @@
     home.stateVersion = "23.11";
     home.username = "${username}";
     home.homeDirectory = "/home/${username}";
-    programs.home-manager.enable = true;
+
+    # programs.home-manager.enable = true;
 
     # Fastfetch
     home.file = {
@@ -27,10 +24,10 @@
       };
     };
 
-    # Starship
+    # YT Music
     home.file = {
-      ".config/starship/" = {
-        source = "${dotfiles}/.config/starship";
+      ".config/YouTube Music/config.json" = {
+        source = "${dotfiles}/.config/YouTube Music/config.json";
       };
     };
   };

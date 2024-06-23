@@ -14,7 +14,7 @@
   outputs = inputs @ {
     nixpkgs,
     #nixpkgs-unstable,
-    #nixos-hardware,
+    nixos-hardware,
     nix-flatpak,
     #nix-vscode-extensions,
     catppuccin,
@@ -22,19 +22,23 @@
     ...
   }: {
     nixosConfigurations = {
-      #atreides is the name of one configuration
       atreides = nixpkgs.lib.nixosSystem {
         specialArgs = {
           username = "egirlcatnip";
           dotfiles = ./dotfiles;
           system = "x86_64-linux";
+          inherit inputs;
         };
 
         modules = [
-          # Configuration for the machine
-          ./machines/atreides/atreides.nix
-          # ~ Configuration for the machine
-          ./configuration
+          # Zephyrus G14 2022
+          nixos-hardware.nixosModules.asus-zephyrus-ga402
+
+          # Machine specific configuration
+          ./machines/atreides
+
+          # ~ Home manager configuration
+          ./home
 
           # Tools used
           home-manager.nixosModules.home-manager

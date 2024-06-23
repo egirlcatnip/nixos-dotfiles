@@ -1,40 +1,32 @@
-{pkgs, ...}:
-# Packages for all systems to share
-{
-  nixpkgs.config.allowUnfree = true;
-
+{pkgs, ...}: {
+  # Packages shared by all systems
   environment.systemPackages = with pkgs; [
-    alejandra
-    bat
-    eza
-    ffmpeg_7-full
+    # Main browser
     google-chrome
+    #chromium
+    #firefox
 
-    git
-
-    nh
-    nixd
-    ptyxis
+    #Text editor/IDE
     vscode
-    armcord
-    fastfetch
-    starship
 
-    btop
-    rocmPackages.rocm-smi
-    zsh
-    zoxide
-    fzf
-    gh
+    # Theming
+    gnome.adwaita-icon-theme
+    adw-gtk3
+    morewaita-icon-theme
+
+    # Gnome related
+    gnome-extension-manager
+    gnome.dconf-editor
   ];
 
+  # Exclusions
   services.xserver.excludePackages = [pkgs.xterm];
   environment.gnome.excludePackages = with pkgs; [
+    gnome.gnome-shell-extensions
     gnome-connections # remote desktop
     gnome-console
     gnome-tour
     gnome.geary # mail
-    gnome.gnome-contacts
     gnome.gnome-contacts
     gnome.gnome-maps
     gnome.gnome-music

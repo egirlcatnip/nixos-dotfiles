@@ -12,18 +12,14 @@
   services.thermald.enable = true;
   services.auto-cpufreq.enable = true;
   services.fstrim.enable = true;
-
   zramSwap.enable = true;
 
   # Choose only one bootloader!
   grub.enable = true;
-  boot.loader.grub.device = "nodev"; # USE YOUR OWN!!
-
   systemdboot.enable = false;
 
-  # Plymouth
+  # Plymouth and silent booting
   silentboot.enable = true;
-  boot.kernelModules = ["kvm-amd"];
 
   # Choose only one Desktop Enviroment
   gnome.enable = true;

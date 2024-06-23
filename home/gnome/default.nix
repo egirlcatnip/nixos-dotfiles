@@ -3,24 +3,26 @@
     ./extensions.nix
   ];
 
-  programs.gnome-shell = {
-    enable = false;
-  };
-
   dconf.enable = true;
 
   dconf.settings = {
-    # Set windows buttons to MS Windows Style
     "org/gnome/desktop/wm/preferences" = {
+      # Set windows buttons to MS Windows Style
       button-layout = ":minimize,maximize,close";
-
       resize-with-right-button = true;
+    };
+
+    # Fonts
+    "org/gnome/desktop/interface" = {
+      font-name = "JetBrainsMono Nerd Font 11";
+      document-font-name = "JetBrainsMono Nerd Font 11";
+      monospace-font-name = "JetBrainsMono Nerd Font 11";
     };
 
     # Desktop keybindings
     "org/gnome/desktop/wm/keybindings" = {
-      close = ["<Super>q"];
       switch-windows = ["<Alt>Tab"];
+      close = ["<Super>q"];
 
       toggle-maximized = ["<Super>f" "<Super>Up"];
       toggle-fullscreen = ["<Ctrl><Super>f"];
@@ -28,8 +30,7 @@
     };
 
     "org/gnome/shell/keybindings" = {
-      screenshot = ["<Super><Shift>s"];
-      screenshot-window = ["<Ctrl><Shift><Alt>s"];
+      show-screenshot-ui = ["<Super><Shift>s"];
     };
 
     # Custom Keybindings
@@ -42,14 +43,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Terminal";
       binding = "<Super>t";
-      command = "bash -c $TERMINAL";
-    };
-
-    # Fonts
-    "org/gnome/desktop/interface" = {
-      font-name = "JetBrainsMono Nerd Font 11";
-      document-font-name = "JetBrainsMono Nerd Font 11";
-      monospace-font-name = "JetBrainsMono Nerd Font 11";
+      command = "xdg-terminal-exec";
     };
   };
 }

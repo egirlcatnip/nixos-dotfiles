@@ -8,22 +8,16 @@
     XDG_STATE_HOME = "$HOME/.local/state";
 
     # Default programs
-    EDITOR = "code";
-    BROWSER = "google-chrome";
-    TERMINAL = "ptyxis";
 
-    # XDG Ninja
-    ZDOTDIR = "$XDG_CONFIG_HOME/zsh";
-    GNUPGHOME = "$XDG_DATA_HOME/gnupg";
-
-    # Starship config
+    ZDOTDIR = "$XDG_CONFIG_HOME/zsh/";
 
     # FZF
     FZF_DEFAULT_OPTS = ''
       --scroll-off=10
       --min-height=10
+      --height=~20
       --layout=reverse
-
+      --no-separator
       --marker='('
       --pointer='>'
       --prompt=' '

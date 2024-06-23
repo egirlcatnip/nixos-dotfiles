@@ -21,7 +21,7 @@
       boot.loader.grub = {
         enable = true;
         efiSupport = true;
-        #device = "/dev/nvme";
+        device = "nodev";
         timeoutStyle = "hidden";
       };
 
@@ -42,39 +42,27 @@
       boot.loader.systemd-boot.enable = true;
       boot.loader.efi.canTouchEfiVariables = true;
     })
+
     (lib.mkIf config.silentboot.enable {
-      console.earlySetup = true;
+      console.earlySetup = false;
 
       boot = {
-        consoleLogLevel = 3;
+        consoleLogLevel = 0;
 
         initrd = {
           verbose = false;
-          systemd.enable = true;
+          systemd.enable = false;
         };
-
-        initrd.kernelModules = [
-          "i915"
-        ];
 
         plymouth.enable = true;
 
         kernelParams = [
-          "i915.fastboot=1"
-          # prevent the kernel from blanking plymouth out of the fb
-          "fbcon=nodefer"
-          # disable boot logo if any
-          "logo.nologo"
-          # tell the kernel to not be verbose
           "quiet"
           "splash"
-          # disable systemd status messages
-          "rd.systemd.show_status=auto"
-          # lower the udev log level to show only errors or worse
+          "rd.systemd.show_status=false"
           "rd.udev.log_level=3"
-          # disable the cursor in vt to get a black screen during intermissions
-          # TODO turn back on in tty
-          "vt.global_cursor_default=0"
+          "udev.log_priority=3"
+          "boot.shell_on_fail"
         ];
       };
     })

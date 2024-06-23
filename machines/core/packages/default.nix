@@ -1,4 +1,8 @@
-{...}: {
+{
+  config,
+  nixpkgs-unstable,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   imports = [
@@ -8,4 +12,12 @@
     ./fonts.nix
     ./extensions.nix
   ];
+
+  nixpkgs.config = {
+    packageOverrides = pkgs: {
+      unstable = nixpkgs-unstable {
+        config = config.nixpkgs.config;
+      };
+    };
+  };
 }

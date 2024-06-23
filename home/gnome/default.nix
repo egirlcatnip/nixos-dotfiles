@@ -35,6 +35,10 @@
 
     # Custom Keybindings
     "org/gnome/settings-daemon/plugins/media-keys" = {
+      home = ["<Super>e"];
+
+      www = ["<Super>b"];
+
       custom-keybindings = [
         "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
       ];

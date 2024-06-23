@@ -7,4 +7,9 @@
     # User set up in flake.nix, add additional manually
     ./main_user.nix
   ];
+
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "ptyxis";
+  };
 }

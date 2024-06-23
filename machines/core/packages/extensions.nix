@@ -14,5 +14,6 @@
     gnome-40-ui-improvements
     dash-to-dock
     night-theme-switcher
+    native-window-placement
   ];
 }

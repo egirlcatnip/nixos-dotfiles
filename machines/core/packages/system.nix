@@ -32,5 +32,7 @@
     wl-clipboard
     zoxide
     zsh
+    nautilus-open-any-terminal
+    gnome.nautilus-python
   ];
 }

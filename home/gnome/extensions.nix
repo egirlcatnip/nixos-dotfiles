@@ -16,6 +16,7 @@
         gnome-40-ui-improvements.extensionUuid
         dash-to-dock.extensionUuid
         night-theme-switcher.extensionUuid
+        native-window-placement.extensionUuid
       ];
     };
   };

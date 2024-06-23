@@ -13,7 +13,7 @@
 
   outputs = inputs @ {
     nixpkgs,
-    #nixpkgs-unstable,
+    nixpkgs-unstable,
     nixos-hardware,
     nix-flatpak,
     #nix-vscode-extensions,

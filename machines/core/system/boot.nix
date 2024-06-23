@@ -44,14 +44,14 @@
     })
 
     (lib.mkIf config.silentboot.enable {
-      console.earlySetup = true;
+      console.earlySetup = false;
 
       boot = {
         consoleLogLevel = 0;
 
         initrd = {
           verbose = false;
-          systemd.enable = true;
+          systemd.enable = false;
         };
 
         plymouth.enable = true;

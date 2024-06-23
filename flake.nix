@@ -35,7 +35,7 @@
           nixos-hardware.nixosModules.asus-zephyrus-ga402
 
           # Machine specific configuration
-          ./machines/atreides/atreides.nix
+          ./machines/atreides/atreides
 
           # ~ Home manager configuration
           ./home

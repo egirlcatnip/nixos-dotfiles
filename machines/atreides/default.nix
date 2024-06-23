@@ -18,7 +18,7 @@
   grub.enable = true;
   systemdboot.enable = false;
 
-  # Plymouth
+  # Plymouth and silent booting
   silentboot.enable = true;
 
   # Choose only one Desktop Enviroment

@@ -1,28 +1,33 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  dotfiles,
+  ...
+}: {
   # Enable zsh shell
   programs = {
     zsh = {
       enable = true;
 
-      # Enable starship prompt
+      histFile = "$HOME/.history";
+      histSize = 20000;
+
+      # Starship prompt
       promptInit = ''eval "$(starship init zsh)" '';
 
-      interactiveShellInit = ''
-        export ZDOTDIR="$XDG_CONFIG_HOME/zsh";
-        export HISTFILE="$XDG_CONFIG_HOME/zsh/history";
-        export HISTSIZE=20000;
-
-
-
-        export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+      shellInit = ''
+        export STARSHIP_CONFIG="/etc/starship"
         export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
+        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+      '';
 
+      # .zshrc
+      interactiveShellInit = ''
         source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
+        eval "$(zoxide init zsh)"
 
         # autocomplete
         autoload -Uz compinit && compinit
-        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
         # Ignore caps on autocomplete
         zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -38,8 +43,15 @@
         "HIST_IGNORE_SPACE"
         "AUTO_CD"
       ];
-
-      syntaxHighlighting.enable = true;
     };
+  };
+  environment.etc = {
+    starship.source = "${dotfiles}/.config/starship/starship.toml";
+  };
+
+  environment.variables = {
+    EDITOR = "code";
+    BROWSER = "google-chrome-stable";
+    TERM = "ptyxis";
   };
 }

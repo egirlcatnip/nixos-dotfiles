@@ -8,14 +8,9 @@
     XDG_STATE_HOME = "$HOME/.local/state";
 
     # Default programs
-    EDITOR = "code";
-    BROWSER = "google-chrome";
-    TERMINAL = "ptyxis";
 
     # XDG Ninja
     GNUPGHOME = "$XDG_DATA_HOME/gnupg";
-
-    # Starship config
 
     # FZF
     FZF_DEFAULT_OPTS = ''

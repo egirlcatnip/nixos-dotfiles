@@ -19,7 +19,7 @@
 
     # Empty .zshrc, for user configuration
     home.file = {
-      ".zshrc/" = "";
+      ".zshrc".text = "";
     };
 
     # Fastfetch

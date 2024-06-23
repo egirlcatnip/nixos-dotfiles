@@ -20,5 +20,14 @@
     vim
     zoxide
     zsh
+    file
+    trashy
+    hyperfine
+    fd
+    tealdeer
+    ouch
+    procs
+    onefetch
+    fend
   ];
 }

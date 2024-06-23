@@ -44,7 +44,7 @@
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       name = "Terminal";
       binding = "<Super>t";
-      command = "bash -c $TERM";
+      command = "xdg-terminal-exec";
     };
   };
 }

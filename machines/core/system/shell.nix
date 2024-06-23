@@ -54,6 +54,14 @@
   environment.variables = {
     EDITOR = "code";
     BROWSER = "google-chrome-stable";
-    TERM = "ptyxis";
+    TERM = "xdg-terminal-exec";
+  };
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "org.gnome.Ptyxis.desktop"
+      ];
+    };
   };
 }

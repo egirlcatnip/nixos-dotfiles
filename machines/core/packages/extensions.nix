@@ -12,7 +12,7 @@
     bluetooth-battery-meter
     battery-health-charging
     gnome-40-ui-improvements
-    fuzzy-app-search
     dash-to-dock
+    night-theme-switcher
   ];
 }

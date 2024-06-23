@@ -18,9 +18,12 @@ in {
       histFile = "$HOME/.history";
       histSize = 20000;
 
-      interactiveShellInit = ''
+      promptInit = ''
         export STARSHIP_CONFIG="/etc/starship"
         eval "$(starship init zsh)"
+      '';
+
+      interactiveShellInit = ''
         source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
         source "${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh"
@@ -28,6 +31,7 @@ in {
         source "${zsh-shift-select}/zsh-shift-select.plugin.zsh"
 
         eval "$(zoxide init zsh)"
+        #source <(cod init $$ zsh)
 
         zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=* m:{a-z}={A-Za-z}'
 

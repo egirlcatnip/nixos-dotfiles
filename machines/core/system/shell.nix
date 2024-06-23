@@ -59,8 +59,11 @@
   xdg.terminal-exec = {
     enable = true;
     settings = {
-      default = [
+      GNOME = [
         "org.gnome.Ptyxis.desktop"
+      ];
+      KDE = [
+        "org.kde.konsole.desktop"
       ];
     };
   };

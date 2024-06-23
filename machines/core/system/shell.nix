@@ -18,24 +18,17 @@ in {
       histFile = "$HOME/.history";
       histSize = 20000;
 
-      # Starship prompt
-      promptInit = ''
+      interactiveShellInit = ''
         export STARSHIP_CONFIG="/etc/starship"
         eval "$(starship init zsh)"
-      '';
-
-      # .zshrc
-      interactiveShellInit = ''
-
         source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
+        source "${pkgs.zsh-you-should-use}/share/zsh/plugins/you-should-use/you-should-use.plugin.zsh"
 
         source "${zsh-shift-select}/zsh-shift-select.plugin.zsh"
 
-
         eval "$(zoxide init zsh)"
 
-        autoload -Uz compinit && compinit
         zstyle ':completion:*' matcher-list 'r:|=*' 'l:|=* r:|=* m:{a-z}={A-Za-z}'
 
         bindkey "^[[1;5C" emacs-forward-word
@@ -43,24 +36,21 @@ in {
         bindkey "^[[3~" delete-char
         bindkey "^[[3;5~" kill-word
         bindkey '^H' backward-kill-word
-
-
       '';
 
       loginShellInit = ''
-        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
-        if ! [ -d "~/.zshrc" ]; then
-          touch ~/.zshrc
+        if ! [ -d "~/.config/zsh/.zshrc" ]; then
+          touch ~/.config/zsh/.zshrc
         fi
       '';
 
       setOptions = [
         "HIST_EXPIRE_DUPS_FIRST"
+        "HIST_IGNORE_DUPS"
+        "HIST_IGNORE_ALL_DUPS"
         "HIST_IGNORE_SPACE"
         "HIST_FIND_NO_DUPS"
         "HIST_SAVE_NO_DUPS"
-        "HIST_IGNORE_DUPS"
-        "HIST_IGNORE_ALL_DUPS"
         "HIST_FCNTL_LOCK"
         "APPEND_HISTORY"
         "SHARE_HISTORY"

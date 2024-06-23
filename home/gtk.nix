@@ -3,16 +3,16 @@
   config,
   ...
 }: {
+  dconf.settings."org/gnome/desktop/interface" = {
+    cursorTheme = "macOS-Monterey";
+    gtk-theme = "adw-gtk3";
+    iconTheme = "MoreWaita";
+  };
+
   gtk = {
+    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
     enable = true;
 
-    gtk2.configLocation = "${config.xdg.configHome}/gtk-2.0/gtkrc";
-    /*
-    theme = {
-      name = "adw-gtk3";
-      package = pkgs.adw-gtk3;
-    };
-    */
     cursorTheme = {
       name = "macOS-Monterey";
       size = 12;

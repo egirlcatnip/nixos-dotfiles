@@ -30,8 +30,7 @@
     };
 
     "org/gnome/shell/keybindings" = {
-      screenshot = ["<Super><Shift>s"];
-      screenshot-window = ["<Ctrl><Shift><Alt>s"];
+      show-screenshot-ui = ["<Super><Shift>s"];
     };
 
     # Custom Keybindings

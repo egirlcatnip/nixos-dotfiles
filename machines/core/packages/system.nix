@@ -28,6 +28,9 @@
     ouch
     procs
     onefetch
-    fend
+    gparted
+    nil
+    xclip
+    wl-clipboard
   ];
 }

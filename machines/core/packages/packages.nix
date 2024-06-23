@@ -12,7 +12,7 @@
     # Theming
     gnome.adwaita-icon-theme
     adw-gtk3
-    apple-cursor
+    morewaita-icon-theme
 
     # Gnome related
     gnome-extension-manager

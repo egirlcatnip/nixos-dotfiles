@@ -3,9 +3,16 @@
   environment.systemPackages = with pkgs.gnomeExtensions; [
     blur-my-shell
     dash-to-panel
-    light-style
-    noannoyance-fork
     tiling-assistant
-    light-shell
+    luminus-shell-y
+    steal-my-focus-window
+    user-themes
+    appindicator
+    arcmenu
+    bluetooth-battery-meter
+    battery-health-charging
+    gnome-40-ui-improvements
+    fuzzy-app-search
+    dash-to-dock
   ];
 }

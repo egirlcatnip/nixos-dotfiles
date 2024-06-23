@@ -3,7 +3,7 @@
 
   fonts = {
     packages = with pkgs; [
-      (nerdfonts.override {fonts = ["Monaspace" "JetBrainsMono"];})
+      (nerdfonts.override {fonts = ["JetBrainsMono"];})
       corefonts
     ];
   };

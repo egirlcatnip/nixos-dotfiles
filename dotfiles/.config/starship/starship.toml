@@ -3,9 +3,6 @@ success_symbol = "[ ](bold green)"
 error_symbol = "[ ](bold red)"
 
 [directory]
-truncation_length = 5
-truncation_symbol = '‥/'
-before_repo_root_style = "‥/"
 style = "blue bold"
 
 [package]

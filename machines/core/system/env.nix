@@ -9,15 +9,15 @@
 
     # Default programs
 
-    # XDG Ninja
-    GNUPGHOME = "$XDG_DATA_HOME/gnupg";
+    ZDOTDIR = "$XDG_CONFIG_HOME/zsh/";
 
     # FZF
     FZF_DEFAULT_OPTS = ''
       --scroll-off=10
       --min-height=10
+      --height=~20
       --layout=reverse
-
+      --no-separator
       --marker='('
       --pointer='>'
       --prompt=' '

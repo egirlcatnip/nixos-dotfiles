@@ -17,11 +17,6 @@
 
     # programs.home-manager.enable = true;
 
-    # Empty .zshrc, for user configuration
-    home.file = {
-      ".zshrc".text = "";
-    };
-
     # Fastfetch
     home.file = {
       ".config/fastfetch/" = {

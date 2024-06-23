@@ -19,7 +19,6 @@
 
       # .zshrc
       interactiveShellInit = ''
-        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
         source "${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh"
         source "${pkgs.zsh-fzf-history-search}/share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh"
@@ -27,6 +26,13 @@
 
         autoload -Uz compinit && compinit
         zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+      '';
+
+      loginShellInit = ''
+        compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+        if ! [ -d "~/.zshrc" ]; then
+          touch ~/.zshrc
+        fi
       '';
 
       setOptions = [

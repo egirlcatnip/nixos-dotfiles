@@ -40,9 +40,6 @@
           # Configurations
           ./config
 
-          # ~ Home manager configuration
-          ./home
-
           # Tools used
           home-manager.nixosModules.home-manager
           nix-flatpak.nixosModules.nix-flatpak

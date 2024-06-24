@@ -1,3 +1,7 @@
 {...}: {
-  imports = [./vscode];
+  imports = [
+    ./vscode
+    ./gnome
+    ./vscode
+  ];
 }

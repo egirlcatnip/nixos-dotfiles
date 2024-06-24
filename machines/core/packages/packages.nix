@@ -22,6 +22,9 @@
   # Exclusions
   services.xserver.excludePackages = [pkgs.xterm];
   environment.gnome.excludePackages = with pkgs; [
+    epiphany # Gnome Web
+    gnome.gnome-clocks
+    gnome.gnome-weather
     gnome.gnome-shell-extensions
     gnome-connections # remote desktop
     gnome-console

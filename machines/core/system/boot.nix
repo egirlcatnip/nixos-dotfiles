@@ -44,10 +44,11 @@
     })
 
     (lib.mkIf config.silentboot.enable {
-      console.earlySetup = false;
+      console.earlySetup = true;
 
       boot = {
         consoleLogLevel = 0;
+        loader.timeout = 1;
 
         initrd = {
           verbose = false;
@@ -61,7 +62,9 @@
           "splash"
           "rd.systemd.show_status=false"
           "rd.udev.log_level=3"
+          "rd.systemd.show_status=false"
           "udev.log_priority=3"
+          "rd.udev.log_level=3"
           "boot.shell_on_fail"
         ];
       };

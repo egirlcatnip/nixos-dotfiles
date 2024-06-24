@@ -10,7 +10,7 @@
         steal-my-focus-window.extensionUuid
         user-themes.extensionUuid
         appindicator.extensionUuid
-        arcmenu.extensionUuid
+        #arcmenu.extensionUuid
         bluetooth-battery-meter.extensionUuid
         battery-health-charging.extensionUuid
         gnome-40-ui-improvements.extensionUuid

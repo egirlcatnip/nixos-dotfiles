@@ -34,6 +34,7 @@
     zsh
     nautilus-open-any-terminal
     gnome.nautilus-python
-    nautilus
+    gnome.nautilus
+    pods
   ];
 }

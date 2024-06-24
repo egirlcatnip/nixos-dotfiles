@@ -4,19 +4,23 @@
     settings."org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
-        blur-my-shell.extensionUuid
-        tiling-assistant.extensionUuid
-        luminus-shell-y.extensionUuid
-        steal-my-focus-window.extensionUuid
-        user-themes.extensionUuid
         appindicator.extensionUuid
-        #arcmenu.extensionUuid
-        bluetooth-battery-meter.extensionUuid
+        arcmenu.extensionUuid
         battery-health-charging.extensionUuid
-        gnome-40-ui-improvements.extensionUuid
+        bluetooth-battery-meter.extensionUuid
+        blur-my-shell.extensionUuid
         dash-to-dock.extensionUuid
+        #dash-to-panel.extensionUuid
+        #duckduckgo-search-provider.extensionUuid
+        gnome-40-ui-improvements.extensionUuid
+        luminus-shell-y.extensionUuid
         night-theme-switcher.extensionUuid
-        native-window-placement.extensionUuid
+        #overview-hover.extensionUuid
+        quick-settings-tweaker.extensionUuid
+        steal-my-focus-window.extensionUuid
+        tiling-assistant.extensionUuid
+        user-themes.extensionUuid
+        media-controls.extensionUuid
       ];
     };
   };

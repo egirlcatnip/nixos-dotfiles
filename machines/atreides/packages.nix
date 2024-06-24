@@ -6,7 +6,7 @@
     google-chrome
     firefox
     gnome.gnome-boxes
-    youtube-music
+    unstable.youtube-music
     armcord
   ];
 }

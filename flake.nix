@@ -27,7 +27,7 @@
           username = "egirlcatnip";
           dotfiles = ./dotfiles;
           system = "x86_64-linux";
-          inherit inputs;
+          inherit inputs nixpkgs-unstable;
         };
 
         modules = [
@@ -36,6 +36,9 @@
 
           # Machine specific configuration
           ./machines/atreides
+
+          # Configurations
+          ./config
 
           # ~ Home manager configuration
           ./home

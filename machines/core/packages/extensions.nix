@@ -1,19 +1,20 @@
 {pkgs, ...}: {
   # Packages shared by all systems
   environment.systemPackages = with pkgs.gnomeExtensions; [
-    blur-my-shell
-    dash-to-panel
-    tiling-assistant
-    luminus-shell-y
-    steal-my-focus-window
-    user-themes
     appindicator
     arcmenu
-    bluetooth-battery-meter
     battery-health-charging
-    gnome-40-ui-improvements
+    bluetooth-battery-meter
+    blur-my-shell
     dash-to-dock
+    dash-to-panel
+    gnome-40-ui-improvements
+    luminus-shell-y
     night-theme-switcher
-    native-window-placement
+    quick-settings-tweaker
+    steal-my-focus-window
+    tiling-assistant
+    user-themes
+    media-controls
   ];
 }

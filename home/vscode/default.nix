@@ -2,11 +2,9 @@
   #dotfiles,
   #nix-vscode-extensions,
   pkgs,
+  config,
   ...
-}: let
-  #marketplace = nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace;
-  #marketplace-release = nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace-release;
-in {
+}: {
   programs.vscode = {
     enable = true;
     enableExtensionUpdateCheck = true;
@@ -29,31 +27,21 @@ in {
       kamadorueda.alejandra
       jnoortheen.nix-ide
     ];
-
-    /*
-    ++ (with marketplace; [
-      ionutvmi.path-autocomplete
-      qcz.text-power-tools
-      hideoo.toggler
-      dustypomerleau.rust-syntax
-    ]);
-    */
   };
- 
-  
+
+  /*
   home.file = {
     ".config/Code/User/keybindings.json" = {
-      #source = "${dotfiles}/.config/Code/User/keybindings.json";
       source = ./keybindings.json;
-    };
-    };
-   
-   home.file = {
-    ".config/Code/User/settings.json" = {
-
-      source =./settings.json;
+      recursive = true;
     };
   };
-  
-  
+
+  home.file = {
+    ".config/Code/User/settings.json" = {
+      source = ./settings.json;
+      recursive = true;
+    };
+  };
+  */
 }

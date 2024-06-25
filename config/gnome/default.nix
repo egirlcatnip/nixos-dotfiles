@@ -33,7 +33,6 @@
 
   # Excluded packages from Gnome DE install
   environment.gnome.excludePackages = with pkgs; [
-    adwaita-icon-theme
     epiphany # Gnome Web
     gnome-connections # Gnome remote desktop app
     gnome-console # Gnome default terminal

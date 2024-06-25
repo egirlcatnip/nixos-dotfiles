@@ -47,7 +47,7 @@
     "window.dialogStyle": "custom",
     "rust-analyzer.check.command": "clippy",
     "rust-analyzer.diagnostics.styleLints.enable": true,
-    "nix.serverPath": "nixd",
+    "nix.serverPath": "nil",
     "nix.enableLanguageServer": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,

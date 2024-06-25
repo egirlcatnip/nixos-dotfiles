@@ -33,5 +33,10 @@
     zoxide
     zsh
     pods
+    google-chrome
+    vscode
   ];
+
+  # Exclude the default x.org terminal
+  services.xserver.excludePackages = [pkgs.xterm];
 }

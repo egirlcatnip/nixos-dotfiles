@@ -5,9 +5,9 @@
 }: {
   home-manager.users.${username} = {
     dconf.settings."org/gnome/desktop/interface" = {
-      cursorTheme = "macOS-Monterey";
+      cursor-Theme = "macOS-Monterey";
       gtk-theme = "adw-gtk3";
-      iconTheme = "MoreWaita";
+      icon-Theme = "MoreWaita";
     };
   };
 

@@ -5,5 +5,6 @@
     ./wireless.nix
     ./audio.nix
     ./key_layout.nix
+    ./printing.nix
   ];
 }

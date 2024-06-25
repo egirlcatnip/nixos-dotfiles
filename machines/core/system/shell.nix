@@ -19,7 +19,12 @@ in {
       histSize = 20000;
 
       promptInit = ''
-        export STARSHIP_CONFIG="/etc/starship"
+        # If we're tty, set basic config
+        export STARSHIP_CONFIG="/etc/starship_tty"
+
+        # If we're in a graphical enviroment, set full config
+        [[ -v DISPLAY ]] && export STARSHIP_CONFIG="/etc/starship"
+
         eval "$(starship init zsh)"
       '';
 
@@ -65,6 +70,7 @@ in {
 
   environment.etc = {
     starship.source = "${dotfiles}/.config/starship/starship.toml";
+    starship_tty.source = "${dotfiles}/.config/starship/starship_tty.toml";
   };
 
   environment.variables = {

@@ -13,16 +13,7 @@
 in
 */
 {
-  /*
   environment.systemPackages = with pkgs; [
-    (google-chrome.override {
-      commandLineArgs = [
-        "--enable-features=VaapiVideoDecodeLinuxGL"
-        "--ignore-gpu-blocklist"
-        "--enable-zero-copy"
-      ];
-    })
-    /*
     (chromium.override {
       commandLineArgs = [
         "--enable-features=VaapiVideoDecodeLinuxGL"
@@ -30,11 +21,8 @@ in
         "--enable-zero-copy"
       ];
     })
-
   ];
 
-
-  */
   home-manager.users.${username} = {
     #home.file."${config_path}".source = "${config}";
 
@@ -42,15 +30,7 @@ in
 
     programs.chromium = {
       enable = true;
-      /*
-      package = pkgs.google-chrome.override {
-        commandLineArgs = [
-          "--enable-features=VaapiVideoDecodeLinuxGL"
-          "--ignore-gpu-blocklist"
-          "--enable-zero-copy"
-        ];
-      };
-      */
+
       extensions = [
         {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock origin
         {id = "dcpihecpambacapedldabdbpakmachpb";} # bypass-paywalls

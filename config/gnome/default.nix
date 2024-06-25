@@ -20,6 +20,9 @@
         button-layout = ":minimize,maximize,close";
         resize-with-right-button = true;
       };
+      "org/gnome/mutter" = {
+        dynamic-workspaces = true;
+      };
     };
   };
 

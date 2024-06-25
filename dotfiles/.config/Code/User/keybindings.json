@@ -709,7 +709,17 @@
   },
   {
     "key": "ctrl+shift+d",
-    "command": "editor.action.duplicateSelection",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
   }
 ]

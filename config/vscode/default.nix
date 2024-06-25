@@ -1,8 +1,17 @@
 {
   username,
+  dotfiles,
   pkgs,
   ...
-}: {
+}: let
+  settings_path = ".config/Code/User/settings.json";
+  keybindings_path = ".config/Code/User/keybindings.json";
+
+  settings = "${dotfiles}/${settings_path}";
+  keybindings = "${dotfiles}/${keybindings_path}";
+in {
+  environment.systemPackages = with pkgs; [vscode];
+
   home-manager.users.${username} = {
     programs.vscode = {
       enable = true;
@@ -29,17 +38,11 @@
     };
 
     home.file = {
-      ".config/Code/User/keybindings.json" = {
-        source = ./keybindings.json;
-        recursive = true;
-      };
+      "${keybindings_path}".source = keybindings;
     };
 
     home.file = {
-      ".config/Code/User/settings.json" = {
-        source = ./settings.json;
-        recursive = true;
-      };
+      "${settings_path}".source = settings;
     };
   };
 }

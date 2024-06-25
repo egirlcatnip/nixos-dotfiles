@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  dotfiles,
+  ...
+}: {
   home-manager.users.${username} = {
     home.file = {
       ".config/YouTube Music/config.json" = {

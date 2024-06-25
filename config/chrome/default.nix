@@ -51,6 +51,7 @@ in
         {id = "kdbmhfkmnlmbkgbabkdealhhbfhlmmon";} # steam-db
         {id = "cngoemokfjekjkmajenlaokhnmmiinca";} # wiki-gg-redirect
         {id = "lnjaiaapbakfhlbjenjkhffcdpoompki";} # catppuccin-github-icons
+        {id = "bkdgflcldnnnapblkhphbgpggdiikppg";} # ddg-privacy-essentials
       ];
     };
   };

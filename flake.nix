@@ -9,9 +9,10 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     catppuccin.url = "github:catppuccin/nix";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
-    nix-ld.url = "github:Mic92/nix-ld";
-    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
     nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-alien.inputs.nixpkgs.follows = "nixos";
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixos";
   };
 
   outputs = inputs @ {

@@ -15,6 +15,7 @@
     ];
     # Flatpak packages shared by all systems
     packages = [
+      # "com.modrinth.ModrinthApp"
     ];
   };
 }

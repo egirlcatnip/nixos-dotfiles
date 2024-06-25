@@ -7,7 +7,6 @@
     cod
     erdtree
     eza
-    fastfetch
     fd
     ffmpeg_7-full
     file
@@ -33,7 +32,6 @@
     zoxide
     zsh
     pods
-    google-chrome
     vscode
   ];
 

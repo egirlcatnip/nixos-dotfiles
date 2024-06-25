@@ -7,5 +7,7 @@
     ./fastfetch
     ./youtube_music
     ./armcord
+    ./chrome
+    ./ptyxis
   ];
 }

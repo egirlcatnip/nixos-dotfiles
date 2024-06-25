@@ -18,6 +18,8 @@ in {
     boot.plymouth.catppuccin.enable = false;
     boot.loader.grub.catppuccin.enable = false;
 
+    # Local catppuccin grub theme edited to fix the nixos-generations entries' text
+    # https://github.com/catppuccin/grub/issues/21
     boot.loader.grub.theme = grub_theme;
   };
 }

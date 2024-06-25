@@ -1,18 +1,8 @@
 {
   username,
-  #dotfiles,
   pkgs,
   ...
-}:
-/*
-     let
-
-  config_path = ".config/";
-  config = "${dotfiles}/${config_path}";
-
-in
-*/
-{
+}: {
   environment.systemPackages = with pkgs; [
     (chromium.override {
       commandLineArgs = [
@@ -23,16 +13,21 @@ in
     })
   ];
 
+  programs.chromium = {
+    enable = true;
+    extraOpts = {
+      "DefaultSearchProviderEnabled" = true;
+      "DefaultSearchProviderName" = "DuckDuckGo";
+      "DefaultSearchProviderSearchURL" = "https://duckduckgo.com/?q={searchTerms}";
+    };
+  };
+
   home-manager.users.${username} = {
-    #home.file."${config_path}".source = "${config}";
-
-    #TODO configuration
-
     programs.chromium = {
       enable = true;
 
       extensions = [
-        {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock origin
+        {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # ublock-origin
         {id = "dcpihecpambacapedldabdbpakmachpb";} # bypass-paywalls
         {id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";} # dark-reader
         {id = "apmmpaebfobifelkijhaljbmpcgbjbdo";} # stylus
@@ -51,7 +46,6 @@ in
         {id = "kdbmhfkmnlmbkgbabkdealhhbfhlmmon";} # steam-db
         {id = "cngoemokfjekjkmajenlaokhnmmiinca";} # wiki-gg-redirect
         {id = "lnjaiaapbakfhlbjenjkhffcdpoompki";} # catppuccin-github-icons
-        {id = "bkdgflcldnnnapblkhphbgpggdiikppg";} # ddg-privacy-essentials
       ];
     };
   };

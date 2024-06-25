@@ -1,9 +1,14 @@
-{nixpkgs-unstable, ...}: {
+{
+  pkgs,
+  nixpkgs-unstable,
+  ...
+}: {
   # Packages are defined either in the following modules or next to their configurations in /config/application
   imports = [
     ./system.nix
     ./flatpak.nix
     ./fonts.nix
+    ./dynamic.nix
   ];
 
   # Allow non-open-source applications (eg. Visual Studio Code, Discord, Google Chrome... )

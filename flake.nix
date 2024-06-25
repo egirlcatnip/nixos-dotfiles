@@ -9,6 +9,9 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     catppuccin.url = "github:catppuccin/nix";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+    nix-alien.url = "github:thiagokokada/nix-alien";
   };
 
   outputs = inputs @ {
@@ -19,6 +22,7 @@
     #nix-vscode-extensions,
     catppuccin,
     home-manager,
+    nix-ld,
     ...
   }: {
     nixosConfigurations = {
@@ -44,6 +48,7 @@
           home-manager.nixosModules.home-manager
           nix-flatpak.nixosModules.nix-flatpak
           catppuccin.nixosModules.catppuccin
+          nix-ld.nixosModules.nix-ld
         ];
       };
     };

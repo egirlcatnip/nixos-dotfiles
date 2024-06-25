@@ -33,6 +33,7 @@
     zsh
     pods
     vscode
+    nix-alien
   ];
 
   # Exclude the default x.org terminal

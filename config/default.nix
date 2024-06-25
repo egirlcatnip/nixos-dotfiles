@@ -6,5 +6,6 @@
     ./home
     ./fastfetch
     ./youtube_music
+    ./armcord
   ];
 }

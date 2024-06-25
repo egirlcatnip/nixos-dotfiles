@@ -20,6 +20,9 @@ in {
 
     # Local catppuccin grub theme edited to fix the nixos-generations entries' text
     # https://github.com/catppuccin/grub/issues/21
-    boot.loader.grub.theme = grub_theme;
+    boot.loader.grub = {
+      theme = grub_theme;
+      splashImage = "${grub_theme}/black.png";
+    };
   };
 }

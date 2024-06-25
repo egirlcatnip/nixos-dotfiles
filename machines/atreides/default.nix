@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./../core # Global configs for all systems
     ./hardware.nix # Disk layout *only* for "atreides"
@@ -31,4 +31,13 @@
 
   # Theming
   theming.enable = true;
+
+  # Hardware acceleration
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 }

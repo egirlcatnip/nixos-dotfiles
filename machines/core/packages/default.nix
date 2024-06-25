@@ -9,6 +9,9 @@
   # Allow non-open-source applications (eg. Visual Studio Code, Discord, Google Chrome... )
   nixpkgs.config.allowUnfree = true;
 
+  # Enable wayland for chrome and electron
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Overlay for unstable packages
   # environment.systemPackages = with pkgs; [unstable.package]
   nixpkgs.overlays = [

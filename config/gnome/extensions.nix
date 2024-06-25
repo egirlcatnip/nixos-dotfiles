@@ -35,7 +35,7 @@
         enabled-extensions =
           # Stable extensions
           (with pkgs.gnomeExtensions; [
-            #appindicator.extensionUuid
+            appindicator.extensionUuid
             battery-health-charging.extensionUuid
             bluetooth-battery-meter.extensionUuid
             blur-my-shell.extensionUuid
@@ -50,7 +50,7 @@
             user-themes.extensionUuid
             media-controls.extensionUuid
             just-perfection.extensionUuid
-            app-icons-taskbar.extensionUuid
+            #app-icons-taskbar.extensionUuid
             quick-settings-audio-devices-renamer.extensionUuid
           ])
           # Untable extensions

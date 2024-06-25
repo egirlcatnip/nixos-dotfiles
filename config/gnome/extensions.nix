@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  environment.systemPackages = with pkgs.gnomeExtension; [
+  environment.systemPackages = with pkgs.gnomeExtensions; [
     appindicator
     arcmenu
     battery-health-charging

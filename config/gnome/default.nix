@@ -32,6 +32,10 @@
     gnome-extension-manager
     gnome.dconf-editor
     pods
+    resources
+    papers
+    eyedropper
+    pika-backup
   ];
 
   # Excluded packages from Gnome DE install

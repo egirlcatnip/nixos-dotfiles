@@ -35,11 +35,11 @@
         enabled-extensions =
           # Stable extensions
           (with pkgs.gnomeExtensions; [
-            appindicator.extensionUuid
+            #appindicator.extensionUuid
             battery-health-charging.extensionUuid
             bluetooth-battery-meter.extensionUuid
             blur-my-shell.extensionUuid
-            # dash-to-dock.extensionUuid
+            dash-to-dock.extensionUuid
             # dash-to-panel.extensionUuid # Don't enable by default
             # arcmenu.extensionUuid # Don't enable by default
             gnome-40-ui-improvements.extensionUuid
@@ -69,9 +69,15 @@
 
       "org/gnome/shell/extensions/just-perfection" = {
         switcher-popup-delay = true;
-        dash = false;
+        windows-preview-caption = false;
+        #dash = false;
         workspace-switcher-should-show = true;
         window-demands-attention-focus = true;
+        events-button = false;
+      };
+
+      "org/gnome/shell/extensions/aztaskbar" = {
+        panel-location = "BOTTOM";
       };
     };
   };

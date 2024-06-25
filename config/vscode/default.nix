@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   home-manager.users.${username} = {
     programs.vscode = {
       enable = true;

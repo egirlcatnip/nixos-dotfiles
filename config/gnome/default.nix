@@ -4,7 +4,7 @@
     ./keybindings.nix
     ./fonts.nix
     ./gtk.nix
-    ./nautilus
+    ./nautilus.nix
   ];
 
   home-manager.users.${username} = {

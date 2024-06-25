@@ -1,4 +1,8 @@
-{username, ...}: {
+{
+  username,
+  pkgs,
+  ...
+}: {
   home-manager.users.${username} = {
     dconf.settings = {
       "org/gnome/shell" = {

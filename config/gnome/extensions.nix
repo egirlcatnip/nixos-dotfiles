@@ -20,6 +20,7 @@
       media-controls
       night-theme-switcher
       quick-settings-audio-devices-renamer
+      quick-settings-audio-devices-renamer
       tiling-assistant
       user-themes
     ])
@@ -42,11 +43,11 @@
             bluetooth-battery-meter.extensionUuid
             blur-my-shell.extensionUuid
             gnome-40-ui-improvements.extensionUuid
-
             just-perfection.extensionUuid
             light-style.extensionUuid
             media-controls.extensionUuid
             night-theme-switcher.extensionUuid
+            quick-settings-audio-devices-renamer.extensionUuid
             quick-settings-audio-devices-renamer.extensionUuid
             steal-my-focus-window.extensionUuid
             tiling-assistant.extensionUuid

@@ -10,9 +10,7 @@
     catppuccin.url = "github:catppuccin/nix";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     nix-alien.url = "github:thiagokokada/nix-alien";
-    nix-alien.inputs.nixpkgs.follows = "nixos";
     nix-ld.url = "github:Mic92/nix-ld";
-    nix-ld.inputs.nixpkgs.follows = "nixos";
   };
 
   outputs = inputs @ {
@@ -24,6 +22,7 @@
     catppuccin,
     home-manager,
     nix-ld,
+    nix-alien,
     ...
   }: {
     nixosConfigurations = {
@@ -50,6 +49,9 @@
           nix-flatpak.nixosModules.nix-flatpak
           catppuccin.nixosModules.catppuccin
           nix-ld.nixosModules.nix-ld
+        ];
+        nixpkgs.overlays = [
+          nix-alien.overlays.default
         ];
       };
     };

@@ -6,6 +6,7 @@
   environment.systemPackages =
     # Stable extensions
     (with pkgs.gnomeExtensions; [
+      app-icons-taskbar
       appindicator
       arcmenu
       battery-health-charging
@@ -14,18 +15,18 @@
       dash-to-dock
       dash-to-panel
       gnome-40-ui-improvements
-      luminus-shell-y
+      just-perfection
+      light-style
+      media-controls
       night-theme-switcher
+      quick-settings-audio-devices-renamer
       tiling-assistant
       user-themes
-      media-controls
-      just-perfection
-      app-icons-taskbar
-      quick-settings-audio-devices-renamer
     ])
     # Unstable extensions
     ++ (with pkgs.unstable.gnomeExtensions; [
       quick-settings-tweaker
+      hide-the-dock-in-overview
     ]);
 
   home-manager.users.${username} = {
@@ -35,27 +36,30 @@
         enabled-extensions =
           # Stable extensions
           (with pkgs.gnomeExtensions; [
+            app-icons-taskbar.extensionUuid
             appindicator.extensionUuid
             battery-health-charging.extensionUuid
             bluetooth-battery-meter.extensionUuid
             blur-my-shell.extensionUuid
-            dash-to-dock.extensionUuid
-            # dash-to-panel.extensionUuid # Don't enable by default
-            # arcmenu.extensionUuid # Don't enable by default
             gnome-40-ui-improvements.extensionUuid
-            luminus-shell-y.extensionUuid
+
+            just-perfection.extensionUuid
+            light-style.extensionUuid
+            media-controls.extensionUuid
             night-theme-switcher.extensionUuid
+            quick-settings-audio-devices-renamer.extensionUuid
             steal-my-focus-window.extensionUuid
             tiling-assistant.extensionUuid
             user-themes.extensionUuid
-            media-controls.extensionUuid
-            just-perfection.extensionUuid
-            #app-icons-taskbar.extensionUuid
-            quick-settings-audio-devices-renamer.extensionUuid
+
+            # dash-to-dock.extensionUuid     # Don't enable by default
+            # dash-to-panel.extensionUuid    # Don't enable by default
+            # arcmenu.extensionUuid          # Don't enable by default
           ])
           # Untable extensions
           ++ (with pkgs.unstable.gnomeExtensions; [
             quick-settings-tweaker.extensionUuid
+            hide-the-dock-in-overview.extensionUuid
           ]);
       };
 
@@ -70,7 +74,6 @@
       "org/gnome/shell/extensions/just-perfection" = {
         switcher-popup-delay = true;
         windows-preview-caption = false;
-        #dash = false;
         workspace-switcher-should-show = true;
         window-demands-attention-focus = true;
         events-button = false;

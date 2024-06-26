@@ -1,8 +1,4 @@
-{
-  pkgs,
-  nixpkgs-unstable,
-  ...
-}: {
+{nixpkgs-unstable, ...}: {
   # Packages are defined either in the following modules or next to their configurations in /config/application
   imports = [
     ./system.nix

@@ -33,6 +33,7 @@
     zsh
     pods
     vscode
+    steam-run
   ];
 
   # Exclude the default x.org terminal

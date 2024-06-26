@@ -6,5 +6,6 @@
     firefox
     unstable.youtube-music
     armcord
+    steam
   ];
 }

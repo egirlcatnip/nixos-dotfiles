@@ -83,6 +83,10 @@
       "org/gnome/shell/extensions/aztaskbar" = {
         panel-location = "BOTTOM";
       };
+
+      "org/gnome/shell/extensions/mediacontrols" = {
+        extension-position = "Right";
+      };
     };
   };
 }

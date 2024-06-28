@@ -18,7 +18,6 @@
     hyperfine
     nh
     nil
-    nixd
     onefetch
     ouch
     procs

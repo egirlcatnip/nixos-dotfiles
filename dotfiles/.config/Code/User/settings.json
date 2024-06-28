@@ -55,8 +55,9 @@
     "workbench.editor.empty.hint": "hidden",
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "catppuccin-mocha",
-    "workbench.preferredDarkColorTheme": "Gnome Dark (GitHub)",
-    "workbench.preferredLightColorTheme": "Gnome Light (GitHub)",
+    "workbench.preferredDarkColorTheme": "Adwaita Dark",
+    "workbench.preferredLightColorTheme": "Adwaita Light",
     "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false
+    "workbench.tips.enabled": false,
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootNameShort}"
 }

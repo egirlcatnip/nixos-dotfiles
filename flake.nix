@@ -4,8 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nixos-hardware.url = "github:nixos/nixos-hardware/master";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:nixos/nixos-hardware";
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     catppuccin.url = "github:catppuccin/nix";
@@ -30,7 +30,7 @@
           username = "egirlcatnip";
           dotfiles = ./dotfiles;
           system = "x86_64-linux";
-          inherit inputs nixpkgs-unstable;
+          inherit inputs;
         };
 
         modules = [

@@ -22,7 +22,7 @@ in {
         # If we're tty, set basic config
         export STARSHIP_CONFIG="/etc/starship_tty"
 
-        # If we're in a graphical enviroment, set full config
+        # If we're in a graphical environment, set full config
         [[ -v DISPLAY ]] && export STARSHIP_CONFIG="/etc/starship"
 
         eval "$(starship init zsh)"

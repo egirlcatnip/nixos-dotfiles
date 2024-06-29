@@ -4,8 +4,8 @@
   ...
 }: {
   options = {
-    gnome.enable = lib.mkEnableOption "enable Gnome desktop enviroment";
-    kde.enable = lib.mkEnableOption "enable KDE desktop enviroment";
+    gnome.enable = lib.mkEnableOption "enable Gnome desktop environment";
+    kde.enable = lib.mkEnableOption "enable KDE desktop environment";
   };
 
   config = lib.mkMerge [

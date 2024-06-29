@@ -21,7 +21,7 @@
   # Plymouth and silent booting
   silentboot.enable = true;
 
-  # Choose only one Desktop Enviroment
+  # Choose only one Desktop Environment
   gnome.enable = true;
   kde.enable = false;
 

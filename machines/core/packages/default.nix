@@ -1,4 +1,4 @@
-{nixpkgs-unstable, ...}: {
+{inputs, ...}: {
   # Packages are defined either in the following modules or next to their configurations in /config/application
   imports = [
     ./system.nix
@@ -17,7 +17,7 @@
   # environment.systemPackages = with pkgs; [unstable.package]
   nixpkgs.overlays = [
     (final: prev: {
-      unstable = import nixpkgs-unstable {
+      unstable = import inputs.nixpkgs-unstable {
         system = prev.system;
         config.allowUnfree = true;
       };
